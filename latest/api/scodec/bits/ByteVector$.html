@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Companion for <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a>.</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https:/github.com/scodec/scodec-bits/tree/master/src/main/scala/scodec/bits/ByteVector.scala" target="_blank">ByteVector.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -162,8 +162,8 @@
         <span class="name">apply</span><span class="params">(<span name="bs">bs: <span class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      
-    </li><li name="scodec.bits.ByteVector#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Create a <code>ByteVector</code> from a <code>scala.collection</code> source of bytes.</p>
+    </li><li name="scodec.bits.ByteVector#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply(buffer:java.nio.ByteBuffer):scodec.bits.ByteVector"></a>
       <a id="apply(ByteBuffer):ByteVector"></a>
       <h4 class="signature">
@@ -175,8 +175,11 @@
         <span class="name">apply</span><span class="params">(<span name="buffer">buffer: <span class="extype" name="java.nio.ByteBuffer">ByteBuffer</span></span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      
-    </li><li name="scodec.bits.ByteVector#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Create a <code>ByteVector</code> from a <code>ByteBuffer</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Create a <code>ByteVector</code> from a <code>ByteBuffer</code>. The given <code>ByteBuffer</code> is
+is copied to ensure the resulting <code>ByteVector</code> is immutable.
+If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scodec.bits.ByteVector" class="extmbr" name="scodec.bits.ByteVector#view">scodec.bits.ByteVector.view</a></code>.
+</p></div></div>
+    </li><li name="scodec.bits.ByteVector#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply(bytes:Array[Byte]):scodec.bits.ByteVector"></a>
       <a id="apply(Array[Byte]):ByteVector"></a>
       <h4 class="signature">
@@ -188,7 +191,10 @@
         <span class="name">apply</span><span class="params">(<span name="bytes">bytes: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Create a <code>ByteVector</code> from an <code>Array[Byte]</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Create a <code>ByteVector</code> from an <code>Array[Byte]</code>. The given <code>Array[Byte]</code> is
+is copied to ensure the resulting <code>ByteVector</code> is immutable.
+If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scodec.bits.ByteVector" class="extmbr" name="scodec.bits.ByteVector#view">scodec.bits.ByteVector.view</a></code>.
+</p></div></div>
     </li><li name="scodec.bits.ByteVector#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="apply(bytes:Vector[Byte]):scodec.bits.ByteVector"></a>
       <a id="apply(Vector[Byte]):ByteVector"></a>
@@ -201,7 +207,7 @@
         <span class="name">apply</span><span class="params">(<span name="bytes">bytes: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Create a <code>ByteVector</code> from a <code>Vector[Byte]</code>.</p>
     </li><li name="scodec.bits.ByteVector#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="apply[A](bytes:A*)(implicitevidence$1:Integral[A]):scodec.bits.ByteVector"></a>
       <a id="apply[A](A*)(Integral[A]):ByteVector"></a>
@@ -298,7 +304,7 @@
         <span class="name">fill</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span name="b">b: <span class="extype" name="scodec.bits.ByteVector.fill.A">A</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.Integral">Integral</span>[<span class="extype" name="scodec.bits.ByteVector.fill.A">A</span>]</span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Create a <code>ByteVector</code> of the given size, where all bytes have the value <code>b</code>.</p>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -442,7 +448,7 @@
         <span class="name">high</span><span class="params">(<span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Create a <code>ByteVector</code> of the given size, where all bytes have the value <code>0xff</code>.</p>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -468,7 +474,7 @@
         <span class="name">low</span><span class="params">(<span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Create a <code>ByteVector</code> of the given size, where all bytes have the value <code>0</code>.</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -579,6 +585,20 @@ not to modify the contents of the buffer passed to this function.
 does not make a copy of the input array, so callers should take care
 not to modify the contents of the array passed to this function.
 </p></div></div>
+    </li><li name="scodec.bits.ByteVector#viewI" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="viewI(at:Int=&gt;Int,size:Int):scodec.bits.ByteVector"></a>
+      <a id="viewI((Int)⇒Int,Int):ByteVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">viewI</span><span class="params">(<span name="at">at: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>, <span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a <code>ByteVector</code> from a function from <code>Int =&gt; Int</code> and a size,
+where the <code>Int</code> returned by <code>at</code> must fit in a <code>Byte</code>.</p>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -665,6 +685,6 @@ not to modify the contents of the array passed to this function.
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../lib/diagrams.js"></script>
     </body>
       </html>
