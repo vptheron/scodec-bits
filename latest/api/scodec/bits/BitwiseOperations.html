@@ -109,7 +109,7 @@
         <span class="name">and</span><span class="params">(<span name="other">other: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns a bitwise AND of this &lt;DEFINE IN SUBTYPE&gt; with the specified &lt;DEFINE IN SUBTYPE&gt;.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise AND of this &lt;DEFINE IN SUBTYPE&gt; with the specified &lt;DEFINE IN SUBTYPE&gt;.</p><p>The resulting &lt;DEFINE IN SUBTYPE&gt;'s size is the minimum of this &lt;DEFINE IN SUBTYPE&gt;'s size and the specified &lt;DEFINE IN SUBTYPE&gt;'s size.
+      <p class="shortcomment cmt">Returns a bitwise AND of this value with the specified value.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise AND of this value with the specified value.</p><p>The resulting value's size is the minimum of this value's size and the specified value's size.
 </p></div></div>
     </li><li name="scodec.bits.BitwiseOperations#leftShift" visbl="pub" data-isabs="true" fullComment="no" group="bitwise">
       <a id="leftShift(n:Idx):Repr"></a>
@@ -123,7 +123,7 @@
         <span class="name">leftShift</span><span class="params">(<span name="n">n: <span class="extype" name="scodec.bits.BitwiseOperations.Idx">Idx</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns a &lt;DEFINE IN SUBTYPE&gt; of the same size with each bit shifted to the left <code>n</code> bits.</p>
+      <p class="shortcomment cmt">Returns a value of the same size with each bit shifted to the left <code>n</code> bits.</p>
     </li><li name="scodec.bits.BitwiseOperations#not" visbl="pub" data-isabs="true" fullComment="no" group="bitwise">
       <a id="not:Repr"></a>
       <a id="not:Repr"></a>
@@ -136,7 +136,7 @@
         <span class="name">not</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns a bitwise complement of this &lt;DEFINE IN SUBTYPE&gt;.</p>
+      <p class="shortcomment cmt">Returns a bitwise complement of this value.</p>
     </li><li name="scodec.bits.BitwiseOperations#or" visbl="pub" data-isabs="true" fullComment="yes" group="bitwise">
       <a id="or(other:Repr):Repr"></a>
       <a id="or(Repr):Repr"></a>
@@ -149,7 +149,7 @@
         <span class="name">or</span><span class="params">(<span name="other">other: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns a bitwise OR of this &lt;DEFINE IN SUBTYPE&gt; with the specified &lt;DEFINE IN SUBTYPE&gt;.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise OR of this &lt;DEFINE IN SUBTYPE&gt; with the specified &lt;DEFINE IN SUBTYPE&gt;.</p><p>The resulting &lt;DEFINE IN SUBTYPE&gt;'s size is the minimum of this &lt;DEFINE IN SUBTYPE&gt;'s size and the specified &lt;DEFINE IN SUBTYPE&gt;'s size.
+      <p class="shortcomment cmt">Returns a bitwise OR of this value with the specified value.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise OR of this value with the specified value.</p><p>The resulting value's size is the minimum of this value's size and the specified value's size.
 </p></div></div>
     </li><li name="scodec.bits.BitwiseOperations#rightShift" visbl="pub" data-isabs="true" fullComment="yes" group="bitwise">
       <a id="rightShift(n:Idx,signExtension:Boolean):Repr"></a>
@@ -163,7 +163,7 @@
         <span class="name">rightShift</span><span class="params">(<span name="n">n: <span class="extype" name="scodec.bits.BitwiseOperations.Idx">Idx</span></span>, <span name="signExtension">signExtension: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns a &lt;DEFINE IN SUBTYPE&gt; of the same size with each bit shifted to the right <code>n</code> bits.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a &lt;DEFINE IN SUBTYPE&gt; of the same size with each bit shifted to the right <code>n</code> bits.
+      <p class="shortcomment cmt">Returns a value of the same size with each bit shifted to the right <code>n</code> bits.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a value of the same size with each bit shifted to the right <code>n</code> bits.
 </p></div><dl class="paramcmts block"><dt class="param">signExtension</dt><dd class="cmt"><p>whether the <code>n</code> left-msot bits should take on the value of bit 0
 </p></dd></dl></div>
     </li><li name="scodec.bits.BitwiseOperations#xor" visbl="pub" data-isabs="true" fullComment="yes" group="bitwise">
@@ -178,7 +178,7 @@
         <span class="name">xor</span><span class="params">(<span name="other">other: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns a bitwise XOR of this &lt;DEFINE IN SUBTYPE&gt; with the specified &lt;DEFINE IN SUBTYPE&gt;.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise XOR of this &lt;DEFINE IN SUBTYPE&gt; with the specified &lt;DEFINE IN SUBTYPE&gt;.</p><p>The resulting &lt;DEFINE IN SUBTYPE&gt;'s size is the minimum of this &lt;DEFINE IN SUBTYPE&gt;'s size and the specified &lt;DEFINE IN SUBTYPE&gt;'s size.
+      <p class="shortcomment cmt">Returns a bitwise XOR of this value with the specified value.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise XOR of this value with the specified value.</p><p>The resulting value's size is the minimum of this value's size and the specified value's size.
 </p></div></div>
     </li></ol>
             </div>
@@ -236,7 +236,7 @@
         <span title="gt4s: $amp" class="name">&amp;</span><span class="params">(<span name="other">other: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns a bitwise AND of this &lt;DEFINE IN SUBTYPE&gt; with the specified &lt;DEFINE IN SUBTYPE&gt;.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise AND of this &lt;DEFINE IN SUBTYPE&gt; with the specified &lt;DEFINE IN SUBTYPE&gt;.</p><p>The resulting &lt;DEFINE IN SUBTYPE&gt;'s size is the minimum of this &lt;DEFINE IN SUBTYPE&gt;'s size and the specified &lt;DEFINE IN SUBTYPE&gt;'s size.
+      <p class="shortcomment cmt">Returns a bitwise AND of this value with the specified value.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise AND of this value with the specified value.</p><p>The resulting value's size is the minimum of this value's size and the specified value's size.
 </p></div></div>
     </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="+(other:String):String"></a>
@@ -287,7 +287,7 @@
         <span title="gt4s: $less$less" class="name">&lt;&lt;</span><span class="params">(<span name="n">n: <span class="extype" name="scodec.bits.BitwiseOperations.Idx">Idx</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns a &lt;DEFINE IN SUBTYPE&gt; of the same size with each bit shifted to the left <code>n</code> bits.</p>
+      <p class="shortcomment cmt">Returns a value of the same size with each bit shifted to the left <code>n</code> bits.</p>
     </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:AnyRef):Boolean"></a>
       <a id="==(AnyRef):Boolean"></a>
@@ -326,7 +326,7 @@
         <span title="gt4s: $greater$greater" class="name">&gt;&gt;</span><span class="params">(<span name="n">n: <span class="extype" name="scodec.bits.BitwiseOperations.Idx">Idx</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns a &lt;DEFINE IN SUBTYPE&gt; of the same size with each bit shifted to the right <code>n</code> bits where the <code>n</code> left-most bits are sign extended.</p>
+      <p class="shortcomment cmt">Returns a value of the same size with each bit shifted to the right <code>n</code> bits where the <code>n</code> left-most bits are sign extended.</p>
     </li><li name="scodec.bits.BitwiseOperations#&gt;&gt;&gt;" visbl="pub" data-isabs="false" fullComment="no" group="bitwise">
       <a id="&gt;&gt;&gt;(n:Idx):Repr"></a>
       <a id="&gt;&gt;&gt;(Idx):Repr"></a>
@@ -339,7 +339,7 @@
         <span title="gt4s: $greater$greater$greater" class="name">&gt;&gt;&gt;</span><span class="params">(<span name="n">n: <span class="extype" name="scodec.bits.BitwiseOperations.Idx">Idx</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns a &lt;DEFINE IN SUBTYPE&gt; of the same size with each bit shifted to the right <code>n</code> bits where the <code>n</code> left-most bits are low.</p>
+      <p class="shortcomment cmt">Returns a value of the same size with each bit shifted to the right <code>n</code> bits where the <code>n</code> left-most bits are low.</p>
     </li><li name="scodec.bits.BitwiseOperations#^" visbl="pub" data-isabs="false" fullComment="yes" group="bitwise">
       <a id="^(other:Repr):Repr"></a>
       <a id="^(Repr):Repr"></a>
@@ -352,7 +352,7 @@
         <span title="gt4s: $up" class="name">^</span><span class="params">(<span name="other">other: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns a bitwise XOR of this &lt;DEFINE IN SUBTYPE&gt; with the specified &lt;DEFINE IN SUBTYPE&gt;.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise XOR of this &lt;DEFINE IN SUBTYPE&gt; with the specified &lt;DEFINE IN SUBTYPE&gt;.</p><p>The resulting &lt;DEFINE IN SUBTYPE&gt;'s size is the minimum of this &lt;DEFINE IN SUBTYPE&gt;'s size and the specified &lt;DEFINE IN SUBTYPE&gt;'s size.
+      <p class="shortcomment cmt">Returns a bitwise XOR of this value with the specified value.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise XOR of this value with the specified value.</p><p>The resulting value's size is the minimum of this value's size and the specified value's size.
 </p></div></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
@@ -635,7 +635,7 @@
         <span title="gt4s: unary_$tilde" class="name">unary_~</span><span class="params">()</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns a bitwise complement of this &lt;DEFINE IN SUBTYPE&gt;.</p>
+      <p class="shortcomment cmt">Returns a bitwise complement of this value.</p>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -705,7 +705,7 @@
         <span title="gt4s: $bar" class="name">|</span><span class="params">(<span name="other">other: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns a bitwise OR of this &lt;DEFINE IN SUBTYPE&gt; with the specified &lt;DEFINE IN SUBTYPE&gt;.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise OR of this &lt;DEFINE IN SUBTYPE&gt; with the specified &lt;DEFINE IN SUBTYPE&gt;.</p><p>The resulting &lt;DEFINE IN SUBTYPE&gt;'s size is the minimum of this &lt;DEFINE IN SUBTYPE&gt;'s size and the specified &lt;DEFINE IN SUBTYPE&gt;'s size.
+      <p class="shortcomment cmt">Returns a bitwise OR of this value with the specified value.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise OR of this value with the specified value.</p><p>The resulting value's size is the minimum of this value's size and the specified value's size.
 </p></div></div>
     </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="→[B](y:B):(A,B)"></a>

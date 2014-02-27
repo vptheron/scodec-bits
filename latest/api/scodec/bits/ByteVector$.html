@@ -39,7 +39,8 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https:/github.com/scodec/scodec-bits/tree/master/src/main/scala/scodec/bits/ByteVector.scala" target="_blank">ByteVector.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Companion for <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a>.
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https:/github.com/scodec/scodec-bits/tree/master/src/main/scala/scodec/bits/ByteVector.scala" target="_blank">ByteVector.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -50,7 +51,7 @@
         <div id="order">
               <span class="filtertype">Ordering</span>
               <ol>
-                
+                <li class="group out"><span>Grouped</span></li>
                 <li class="alpha in"><span>Alphabetic</span></li>
                 <li class="inherit out"><span>By inheritance</span></li>
               </ol>
@@ -150,7 +151,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="scodec.bits.ByteVector#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="scodec.bits.ByteVector#apply" visbl="pub" data-isabs="false" fullComment="no" group="constructors">
       <a id="apply(bs:scala.collection.GenTraversableOnce[Byte]):scodec.bits.ByteVector"></a>
       <a id="apply(GenTraversableOnce[Byte]):ByteVector"></a>
       <h4 class="signature">
@@ -162,8 +163,8 @@
         <span class="name">apply</span><span class="params">(<span name="bs">bs: <span class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Create a <code>ByteVector</code> from a <code>scala.collection</code> source of bytes.</p>
-    </li><li name="scodec.bits.ByteVector#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a <code>scala.collection</code> source of bytes.</p>
+    </li><li name="scodec.bits.ByteVector#apply" visbl="pub" data-isabs="false" fullComment="yes" group="constructors">
       <a id="apply(buffer:java.nio.ByteBuffer):scodec.bits.ByteVector"></a>
       <a id="apply(ByteBuffer):ByteVector"></a>
       <h4 class="signature">
@@ -175,11 +176,10 @@
         <span class="name">apply</span><span class="params">(<span name="buffer">buffer: <span class="extype" name="java.nio.ByteBuffer">ByteBuffer</span></span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Create a <code>ByteVector</code> from a <code>ByteBuffer</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Create a <code>ByteVector</code> from a <code>ByteBuffer</code>. The given <code>ByteBuffer</code> is
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a <code>ByteBuffer</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from a <code>ByteBuffer</code>. The given <code>ByteBuffer</code> is
 is copied to ensure the resulting <code>ByteVector</code> is immutable.
-If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scodec.bits.ByteVector" class="extmbr" name="scodec.bits.ByteVector#view">scodec.bits.ByteVector.view</a></code>.
-</p></div></div>
-    </li><li name="scodec.bits.ByteVector#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scodec.bits.ByteVector" class="extmbr" name="scodec.bits.ByteVector#view">ByteVector.view</a></code>.</p></div></div>
+    </li><li name="scodec.bits.ByteVector#apply" visbl="pub" data-isabs="false" fullComment="yes" group="constructors">
       <a id="apply(bytes:Array[Byte]):scodec.bits.ByteVector"></a>
       <a id="apply(Array[Byte]):ByteVector"></a>
       <h4 class="signature">
@@ -191,11 +191,10 @@ If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scode
         <span class="name">apply</span><span class="params">(<span name="bytes">bytes: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Create a <code>ByteVector</code> from an <code>Array[Byte]</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Create a <code>ByteVector</code> from an <code>Array[Byte]</code>. The given <code>Array[Byte]</code> is
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from an <code>Array[Byte]</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from an <code>Array[Byte]</code>. The given <code>Array[Byte]</code> is
 is copied to ensure the resulting <code>ByteVector</code> is immutable.
-If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scodec.bits.ByteVector" class="extmbr" name="scodec.bits.ByteVector#view">scodec.bits.ByteVector.view</a></code>.
-</p></div></div>
-    </li><li name="scodec.bits.ByteVector#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scodec.bits.ByteVector" class="extmbr" name="scodec.bits.ByteVector#view">ByteVector.view</a></code>.</p></div></div>
+    </li><li name="scodec.bits.ByteVector#apply" visbl="pub" data-isabs="false" fullComment="no" group="constructors">
       <a id="apply(bytes:Vector[Byte]):scodec.bits.ByteVector"></a>
       <a id="apply(Vector[Byte]):ByteVector"></a>
       <h4 class="signature">
@@ -207,8 +206,8 @@ If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scode
         <span class="name">apply</span><span class="params">(<span name="bytes">bytes: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Create a <code>ByteVector</code> from a <code>Vector[Byte]</code>.</p>
-    </li><li name="scodec.bits.ByteVector#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a collection of bytes.</p>
+    </li><li name="scodec.bits.ByteVector#apply" visbl="pub" data-isabs="false" fullComment="yes" group="constructors">
       <a id="apply[A](bytes:A*)(implicitevidence$1:Integral[A]):scodec.bits.ByteVector"></a>
       <a id="apply[A](A*)(Integral[A]):ByteVector"></a>
       <h4 class="signature">
@@ -220,7 +219,8 @@ If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scode
         <span class="name">apply</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="bytes">bytes: <span class="extype" name="scodec.bits.ByteVector.apply.A">A</span>*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.Integral">Integral</span>[<span class="extype" name="scodec.bits.ByteVector.apply.A">A</span>]</span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a list of literal bytes.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from a list of literal bytes. Only the least significant
+byte is used of each integral value.</p></div></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -253,7 +253,7 @@ If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scode
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scodec.bits.ByteVector#empty" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="scodec.bits.ByteVector#empty" visbl="pub" data-isabs="false" fullComment="no" group="constants">
       <a id="empty:scodec.bits.ByteVector"></a>
       <a id="empty:ByteVector"></a>
       <h4 class="signature">
@@ -265,7 +265,7 @@ If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scode
         <span class="name">empty</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Empty byte vector.</p>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -292,7 +292,7 @@ If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scode
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scodec.bits.ByteVector#fill" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="scodec.bits.ByteVector#fill" visbl="pub" data-isabs="false" fullComment="no" group="constructors">
       <a id="fill[A](size:Int)(b:A)(implicitevidence$2:Integral[A]):scodec.bits.ByteVector"></a>
       <a id="fill[A](Int)(A)(Integral[A]):ByteVector"></a>
       <h4 class="signature">
@@ -304,7 +304,7 @@ If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scode
         <span class="name">fill</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span name="b">b: <span class="extype" name="scodec.bits.ByteVector.fill.A">A</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.Integral">Integral</span>[<span class="extype" name="scodec.bits.ByteVector.fill.A">A</span>]</span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Create a <code>ByteVector</code> of the given size, where all bytes have the value <code>b</code>.</p>
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> of the given size, where all bytes have the value <code>b</code>.</p>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -324,92 +324,126 @@ If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scode
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scodec.bits.ByteVector#fromBin" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fromBin(str:String):Option[scodec.bits.ByteVector]"></a>
-      <a id="fromBin(String):Option[ByteVector]"></a>
+    </li><li name="scodec.bits.ByteVector#fromBase64" visbl="pub" data-isabs="false" fullComment="yes" group="base">
+      <a id="fromBase64(str:String,alphabet:scodec.bits.Bases.Base64Alphabet):Option[scodec.bits.ByteVector]"></a>
+      <a id="fromBase64(String,Base64Alphabet):Option[ByteVector]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromBin</span><span class="params">(<span name="str">str: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a>]</span>
+        <span class="name">fromBase64</span><span class="params">(<span name="str">str: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="alphabet">alphabet: <a href="Bases$$Base64Alphabet.html" class="extype" name="scodec.bits.Bases.Base64Alphabet">Base64Alphabet</a> = <span class="symbol"><span class="name"><a href="Bases$.html">Bases.Alphabets.Base64</a></span></span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a binary string or returns <code>None</code> if the string is not valid binary.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from a binary string or returns <code>None</code> if the string is not valid binary.</p><p>The string may start with a <code>0b</code> and it may contain whitespace or underscore characters.
-</p></div></div>
-    </li><li name="scodec.bits.ByteVector#fromBinDescriptive" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fromBinDescriptive(str:String):Either[String,scodec.bits.ByteVector]"></a>
-      <a id="fromBinDescriptive(String):Either[String,ByteVector]"></a>
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a base 64 string or returns <code>None</code> if the string is not valid base 64.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from a base 64 string or returns <code>None</code> if the string is not valid base 64.</p><p>The string may contain whitespace characters.</p></div></div>
+    </li><li name="scodec.bits.ByteVector#fromBase64Descriptive" visbl="pub" data-isabs="false" fullComment="yes" group="base">
+      <a id="fromBase64Descriptive(str:String,alphabet:scodec.bits.Bases.Base64Alphabet):Either[String,scodec.bits.ByteVector]"></a>
+      <a id="fromBase64Descriptive(String,Base64Alphabet):Either[String,ByteVector]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromBinDescriptive</span><span class="params">(<span name="str">str: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a>]</span>
+        <span class="name">fromBase64Descriptive</span><span class="params">(<span name="str">str: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="alphabet">alphabet: <a href="Bases$$Base64Alphabet.html" class="extype" name="scodec.bits.Bases.Base64Alphabet">Base64Alphabet</a> = <span class="symbol"><span class="name"><a href="Bases$.html">Bases.Alphabets.Base64</a></span></span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a binary string or returns an error message if the string is not valid binary.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from a binary string or returns an error message if the string is not valid binary.</p><p>The string may start with a <code>0b</code> and it may contain whitespace or underscore characters.
-</p></div></div>
-    </li><li name="scodec.bits.ByteVector#fromHex" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fromHex(str:String):Option[scodec.bits.ByteVector]"></a>
-      <a id="fromHex(String):Option[ByteVector]"></a>
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a base 64 string or returns an error message if the string is not valid base 64.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from a base 64 string or returns an error message if the string is not valid base 64.</p><p>The string may contain whitespace characters.</p></div></div>
+    </li><li name="scodec.bits.ByteVector#fromBin" visbl="pub" data-isabs="false" fullComment="yes" group="base">
+      <a id="fromBin(str:String,alphabet:scodec.bits.Bases.BinaryAlphabet):Option[scodec.bits.ByteVector]"></a>
+      <a id="fromBin(String,BinaryAlphabet):Option[ByteVector]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromHex</span><span class="params">(<span name="str">str: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a>]</span>
+        <span class="name">fromBin</span><span class="params">(<span name="str">str: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="alphabet">alphabet: <a href="Bases$$BinaryAlphabet.html" class="extype" name="scodec.bits.Bases.BinaryAlphabet">BinaryAlphabet</a> = <span class="symbol"><span class="name"><a href="Bases$.html">Bases.Alphabets.Binary</a></span></span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a hexadecimal string or returns <code>None</code> if the string is not valid hexadecimal.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from a hexadecimal string or returns <code>None</code> if the string is not valid hexadecimal.</p><p>The string may start with a <code>0x</code> and it may contain whitespace or underscore characters.
-</p></div></div>
-    </li><li name="scodec.bits.ByteVector#fromHexDescriptive" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fromHexDescriptive(str:String):Either[String,scodec.bits.ByteVector]"></a>
-      <a id="fromHexDescriptive(String):Either[String,ByteVector]"></a>
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a binary string or returns <code>None</code> if the string is not valid binary.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from a binary string or returns <code>None</code> if the string is not valid binary.</p><p>The string may start with a <code>0b</code> and it may contain whitespace or underscore characters.</p></div></div>
+    </li><li name="scodec.bits.ByteVector#fromBinDescriptive" visbl="pub" data-isabs="false" fullComment="yes" group="base">
+      <a id="fromBinDescriptive(str:String,alphabet:scodec.bits.Bases.BinaryAlphabet):Either[String,scodec.bits.ByteVector]"></a>
+      <a id="fromBinDescriptive(String,BinaryAlphabet):Either[String,ByteVector]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromHexDescriptive</span><span class="params">(<span name="str">str: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a>]</span>
+        <span class="name">fromBinDescriptive</span><span class="params">(<span name="str">str: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="alphabet">alphabet: <a href="Bases$$BinaryAlphabet.html" class="extype" name="scodec.bits.Bases.BinaryAlphabet">BinaryAlphabet</a> = <span class="symbol"><span class="name"><a href="Bases$.html">Bases.Alphabets.Binary</a></span></span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a hexadecimal string or returns an error message if the string is not valid hexadecimal.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from a hexadecimal string or returns an error message if the string is not valid hexadecimal.</p><p>The string may start with a <code>0x</code> and it may contain whitespace or underscore characters.
-</p></div></div>
-    </li><li name="scodec.bits.ByteVector#fromValidBin" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fromValidBin(str:String):scodec.bits.ByteVector"></a>
-      <a id="fromValidBin(String):ByteVector"></a>
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a binary string or returns an error message if the string is not valid binary.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from a binary string or returns an error message if the string is not valid binary.</p><p>The string may start with a <code>0b</code> and it may contain whitespace or underscore characters.</p></div></div>
+    </li><li name="scodec.bits.ByteVector#fromHex" visbl="pub" data-isabs="false" fullComment="yes" group="base">
+      <a id="fromHex(str:String,alphabet:scodec.bits.Bases.HexAlphabet):Option[scodec.bits.ByteVector]"></a>
+      <a id="fromHex(String,HexAlphabet):Option[ByteVector]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromValidBin</span><span class="params">(<span name="str">str: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
+        <span class="name">fromHex</span><span class="params">(<span name="str">str: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="alphabet">alphabet: <a href="Bases$$HexAlphabet.html" class="extype" name="scodec.bits.Bases.HexAlphabet">HexAlphabet</a> = <span class="symbol"><span class="name"><a href="Bases$.html">Bases.Alphabets.HexLowercase</a></span></span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a hexadecimal string or returns <code>None</code> if the string is not valid hexadecimal.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from a hexadecimal string or returns <code>None</code> if the string is not valid hexadecimal.</p><p>The string may start with a <code>0x</code> and it may contain whitespace or underscore characters.</p></div></div>
+    </li><li name="scodec.bits.ByteVector#fromHexDescriptive" visbl="pub" data-isabs="false" fullComment="yes" group="base">
+      <a id="fromHexDescriptive(str:String,alphabet:scodec.bits.Bases.HexAlphabet):Either[String,scodec.bits.ByteVector]"></a>
+      <a id="fromHexDescriptive(String,HexAlphabet):Either[String,ByteVector]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fromHexDescriptive</span><span class="params">(<span name="str">str: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="alphabet">alphabet: <a href="Bases$$HexAlphabet.html" class="extype" name="scodec.bits.Bases.HexAlphabet">HexAlphabet</a> = <span class="symbol"><span class="name"><a href="Bases$.html">Bases.Alphabets.HexLowercase</a></span></span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a hexadecimal string or returns an error message if the string is not valid hexadecimal.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from a hexadecimal string or returns an error message if the string is not valid hexadecimal.</p><p>The string may start with a <code>0x</code> and it may contain whitespace or underscore characters.</p></div></div>
+    </li><li name="scodec.bits.ByteVector#fromValidBase64" visbl="pub" data-isabs="false" fullComment="yes" group="base">
+      <a id="fromValidBase64(str:String,alphabet:scodec.bits.Bases.Base64Alphabet):scodec.bits.ByteVector"></a>
+      <a id="fromValidBase64(String,Base64Alphabet):ByteVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fromValidBase64</span><span class="params">(<span name="str">str: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="alphabet">alphabet: <a href="Bases$$Base64Alphabet.html" class="extype" name="scodec.bits.Bases.Base64Alphabet">Base64Alphabet</a> = <span class="symbol"><span class="name"><a href="Bases$.html">Bases.Alphabets.Base64</a></span></span></span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a base 64 string or throws an IllegalArgumentException if the string is not valid base 64.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from a base 64 string or throws an IllegalArgumentException if the string is not valid base 64.</p><p>The string may contain whitespace characters.
+</p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">IllegalArgumentException<p>if the string is not valid base 64</p></span></dd></dl></div>
+    </li><li name="scodec.bits.ByteVector#fromValidBin" visbl="pub" data-isabs="false" fullComment="yes" group="base">
+      <a id="fromValidBin(str:String,alphabet:scodec.bits.Bases.BinaryAlphabet):scodec.bits.ByteVector"></a>
+      <a id="fromValidBin(String,BinaryAlphabet):ByteVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fromValidBin</span><span class="params">(<span name="str">str: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="alphabet">alphabet: <a href="Bases$$BinaryAlphabet.html" class="extype" name="scodec.bits.Bases.BinaryAlphabet">BinaryAlphabet</a> = <span class="symbol"><span class="name"><a href="Bases$.html">Bases.Alphabets.Binary</a></span></span></span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a binary string or throws an IllegalArgumentException if the string is not valid binary.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from a binary string or throws an IllegalArgumentException if the string is not valid binary.</p><p>The string may start with a <code>0b</code> and it may contain whitespace or underscore characters.
-</p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">IllegalArgumentException<p>if the string is not valid hexadecimal
-</p></span></dd></dl></div>
-    </li><li name="scodec.bits.ByteVector#fromValidHex" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fromValidHex(str:String):scodec.bits.ByteVector"></a>
-      <a id="fromValidHex(String):ByteVector"></a>
+</p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">IllegalArgumentException<p>if the string is not valid binary</p></span></dd></dl></div>
+    </li><li name="scodec.bits.ByteVector#fromValidHex" visbl="pub" data-isabs="false" fullComment="yes" group="base">
+      <a id="fromValidHex(str:String,alphabet:scodec.bits.Bases.HexAlphabet):scodec.bits.ByteVector"></a>
+      <a id="fromValidHex(String,HexAlphabet):ByteVector"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromValidHex</span><span class="params">(<span name="str">str: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
+        <span class="name">fromValidHex</span><span class="params">(<span name="str">str: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="alphabet">alphabet: <a href="Bases$$HexAlphabet.html" class="extype" name="scodec.bits.Bases.HexAlphabet">HexAlphabet</a> = <span class="symbol"><span class="name"><a href="Bases$.html">Bases.Alphabets.HexLowercase</a></span></span></span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a hexadecimal string or throws an IllegalArgumentException if the string is not valid hexadecimal.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from a hexadecimal string or throws an IllegalArgumentException if the string is not valid hexadecimal.</p><p>The string may start with a <code>0x</code> and it may contain whitespace or underscore characters.
-</p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">IllegalArgumentException<p>if the string is not valid hexadecimal
-</p></span></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">IllegalArgumentException<p>if the string is not valid hexadecimal</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -436,7 +470,7 @@ If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scode
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scodec.bits.ByteVector#high" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="scodec.bits.ByteVector#high" visbl="pub" data-isabs="false" fullComment="no" group="constructors">
       <a id="high(size:Int):scodec.bits.ByteVector"></a>
       <a id="high(Int):ByteVector"></a>
       <h4 class="signature">
@@ -448,7 +482,7 @@ If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scode
         <span class="name">high</span><span class="params">(<span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Create a <code>ByteVector</code> of the given size, where all bytes have the value <code>0xff</code>.</p>
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> of the given size, where all bytes have the value <code>0xff</code>.</p>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -462,7 +496,7 @@ If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scode
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="scodec.bits.ByteVector#low" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="scodec.bits.ByteVector#low" visbl="pub" data-isabs="false" fullComment="no" group="constructors">
       <a id="low(size:Int):scodec.bits.ByteVector"></a>
       <a id="low(Int):ByteVector"></a>
       <h4 class="signature">
@@ -474,7 +508,7 @@ If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scode
         <span class="name">low</span><span class="params">(<span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Create a <code>ByteVector</code> of the given size, where all bytes have the value <code>0</code>.</p>
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> of the given size, where all bytes have the value <code>0</code>.</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -540,7 +574,7 @@ If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scode
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scodec.bits.ByteVector#view" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="scodec.bits.ByteVector#view" visbl="pub" data-isabs="false" fullComment="no" group="constructors">
       <a id="view(at:Int=&gt;Byte,size:Int):scodec.bits.ByteVector"></a>
       <a id="view((Int)⇒Byte,Int):ByteVector"></a>
       <h4 class="signature">
@@ -552,8 +586,8 @@ If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scode
         <span class="name">view</span><span class="params">(<span name="at">at: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Byte">Byte</span></span>, <span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Create a <code>ByteVector</code> from a function from <code>Int =&gt; Byte</code> and a size.</p>
-    </li><li name="scodec.bits.ByteVector#view" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a function from <code>Int =&gt; Byte</code> and a size.</p>
+    </li><li name="scodec.bits.ByteVector#view" visbl="pub" data-isabs="false" fullComment="yes" group="constructors">
       <a id="view(bytes:java.nio.ByteBuffer):scodec.bits.ByteVector"></a>
       <a id="view(ByteBuffer):ByteVector"></a>
       <h4 class="signature">
@@ -565,11 +599,10 @@ If this is not desired, use <code><a href="#view(at:Int=&gt;Byte,size:Int):scode
         <span class="name">view</span><span class="params">(<span name="bytes">bytes: <span class="extype" name="java.nio.ByteBuffer">ByteBuffer</span></span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Create a <code>ByteVector</code> from a <code>ByteBuffer</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Create a <code>ByteVector</code> from a <code>ByteBuffer</code>. Unlike <code>apply</code>, this
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a <code>ByteBuffer</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from a <code>ByteBuffer</code>. Unlike <code>apply</code>, this
 does not make a copy of the input buffer, so callers should take care
-not to modify the contents of the buffer passed to this function.
-</p></div></div>
-    </li><li name="scodec.bits.ByteVector#view" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+not to modify the contents of the buffer passed to this function.</p></div></div>
+    </li><li name="scodec.bits.ByteVector#view" visbl="pub" data-isabs="false" fullComment="yes" group="constructors">
       <a id="view(bytes:Array[Byte]):scodec.bits.ByteVector"></a>
       <a id="view(Array[Byte]):ByteVector"></a>
       <h4 class="signature">
@@ -581,11 +614,10 @@ not to modify the contents of the buffer passed to this function.
         <span class="name">view</span><span class="params">(<span name="bytes">bytes: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Create a <code>ByteVector</code> from an <code>Array[Byte]</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Create a <code>ByteVector</code> from an <code>Array[Byte]</code>. Unlike <code>apply</code>, this
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from an <code>Array[Byte]</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>ByteVector</code> from an <code>Array[Byte]</code>. Unlike <code>apply</code>, this
 does not make a copy of the input array, so callers should take care
-not to modify the contents of the array passed to this function.
-</p></div></div>
-    </li><li name="scodec.bits.ByteVector#viewI" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+not to modify the contents of the array passed to this function.</p></div></div>
+    </li><li name="scodec.bits.ByteVector#viewI" visbl="pub" data-isabs="false" fullComment="no" group="constructors">
       <a id="viewI(at:Int=&gt;Int,size:Int):scodec.bits.ByteVector"></a>
       <a id="viewI((Int)⇒Int,Int):ByteVector"></a>
       <h4 class="signature">
@@ -597,7 +629,7 @@ not to modify the contents of the array passed to this function.
         <span class="name">viewI</span><span class="params">(<span name="at">at: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>, <span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Create a <code>ByteVector</code> from a function from <code>Int =&gt; Int</code> and a size,
+      <p class="shortcomment cmt">Constructs a <code>ByteVector</code> from a function from <code>Int =&gt; Int</code> and a size,
 where the <code>Int</code> returned by <code>at</code> must fit in a <code>Byte</code>.</p>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
@@ -674,7 +706,16 @@ where the <code>Int</code> returned by <code>at</code> must fit in a <code>Byte<
         </div>
 
         <div id="groupedMembers">
-        <div class="group" name="Ungrouped">
+        <div class="group" name="constants">
+              <h3>Constants</h3>
+              
+            </div><div class="group" name="constructors">
+              <h3>Constructors</h3>
+              
+            </div><div class="group" name="base">
+              <h3>Base Conversions</h3>
+              
+            </div><div class="group" name="Ungrouped">
               <h3>Ungrouped</h3>
               
             </div>
