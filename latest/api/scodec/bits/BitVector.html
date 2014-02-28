@@ -487,6 +487,19 @@ resulting in a vector of the remaining bits and the decoded value.</p><div class
 resulting in a vector of the remaining bits and the decoded value. If this vector
 does not have <code>n</code> bits or an error occurs while decoding, an error is returned instead.
 </p></div></div>
+    </li><li name="scodec.bits.BitVector#containsSlice" visbl="pub" data-isabs="false" fullComment="no" group="collection">
+      <a id="containsSlice(slice:scodec.bits.BitVector):Boolean"></a>
+      <a id="containsSlice(BitVector):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">containsSlice</span><span class="params">(<span name="slice">slice: <a href="" class="extype" name="scodec.bits.BitVector">BitVector</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Determines if the specified slice is in this vector.</p>
     </li><li name="scodec.bits.BitVector#copy" visbl="pub" data-isabs="false" fullComment="yes" group="collection">
       <a id="copy:scodec.bits.BitVector.Bytes"></a>
       <a id="copy:Bytes"></a>
@@ -534,6 +547,19 @@ chunk.
       </h4>
       <p class="shortcomment cmt">Returns a vector of all bits in this vector except the last <code>n</code> bits.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a vector of all bits in this vector except the last <code>n</code> bits.</p><p>The resulting vector's size is <code>0 max (size - n)</code>.
 </p></div></div>
+    </li><li name="scodec.bits.BitVector#endsWith" visbl="pub" data-isabs="false" fullComment="no" group="collection">
+      <a id="endsWith(b:scodec.bits.BitVector):Boolean"></a>
+      <a id="endsWith(BitVector):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">endsWith</span><span class="params">(<span name="b">b: <a href="" class="extype" name="scodec.bits.BitVector">BitVector</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns true if this bit vector ends with the specified vector.</p>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
       <a id="ensuring((BitVector)⇒Boolean,⇒Any):BitVector"></a>
@@ -745,6 +771,32 @@ chunk.
       </span>
       </h4>
       <p class="shortcomment cmt">Returns the first bit of this vector or <code>None</code> if vector is emtpy.</p>
+    </li><li name="scodec.bits.BitVector#indexOfSlice" visbl="pub" data-isabs="false" fullComment="yes" group="collection">
+      <a id="indexOfSlice(slice:scodec.bits.BitVector,from:Long):Long"></a>
+      <a id="indexOfSlice(BitVector,Long):Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">indexOfSlice</span><span class="params">(<span name="slice">slice: <a href="" class="extype" name="scodec.bits.BitVector">BitVector</a></span>, <span name="from">from: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Finds the first index after <code>from</code> of the specified bit pattern in this vector.</p><div class="fullcomment"><div class="comment cmt"><p>Finds the first index after <code>from</code> of the specified bit pattern in this vector.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>index of slice or -1 if not found</p></dd></dl></div>
+    </li><li name="scodec.bits.BitVector#indexOfSlice" visbl="pub" data-isabs="false" fullComment="yes" group="collection">
+      <a id="indexOfSlice(slice:scodec.bits.BitVector):Long"></a>
+      <a id="indexOfSlice(BitVector):Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">indexOfSlice</span><span class="params">(<span name="slice">slice: <a href="" class="extype" name="scodec.bits.BitVector">BitVector</a></span>)</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Finds the first index of the specified bit pattern in this vector.</p><div class="fullcomment"><div class="comment cmt"><p>Finds the first index of the specified bit pattern in this vector.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>index of slice or -1 if not found</p></dd></dl></div>
     </li><li name="scodec.bits.BitVector#init" visbl="pub" data-isabs="false" fullComment="no" group="collection">
       <a id="init:scodec.bits.BitVector"></a>
       <a id="init:BitVector"></a>
@@ -759,15 +811,15 @@ chunk.
       </h4>
       <p class="shortcomment cmt">Returns a vector of all bits in this vector except the last bit.</p>
     </li><li name="scodec.bits.BitVector#insert" visbl="pub" data-isabs="false" fullComment="no" group="collection">
-      <a id="insert(idx:Int,b:Boolean):scodec.bits.BitVector"></a>
-      <a id="insert(Int,Boolean):BitVector"></a>
+      <a id="insert(idx:Long,b:Boolean):scodec.bits.BitVector"></a>
+      <a id="insert(Long,Boolean):BitVector"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">insert</span><span class="params">(<span name="idx">idx: <span class="extype" name="scala.Int">Int</span></span>, <span name="b">b: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.BitVector">BitVector</a></span>
+        <span class="name">insert</span><span class="params">(<span name="idx">idx: <span class="extype" name="scala.Long">Long</span></span>, <span name="b">b: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.BitVector">BitVector</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Returns a vector with the specified bit inserted at the specified index.</p>
@@ -998,6 +1050,32 @@ fit into an <code>Int</code>.</p>
       </h4>
       <p class="shortcomment cmt">Returns an <code>n</code>-bit vector whose contents are 0 or more low bits followed by this vector's contents.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an <code>n</code>-bit vector whose contents are 0 or more low bits followed by this vector's contents.
 </p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">IllegalArgumentException<p>if <code>n &lt; size</code></p></span></dd></dl></div>
+    </li><li name="scodec.bits.BitVector#patch" visbl="pub" data-isabs="false" fullComment="no" group="collection">
+      <a id="patch(idx:Long,b:scodec.bits.BitVector):scodec.bits.BitVector"></a>
+      <a id="patch(Long,BitVector):BitVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">patch</span><span class="params">(<span name="idx">idx: <span class="extype" name="scala.Long">Long</span></span>, <span name="b">b: <a href="" class="extype" name="scodec.bits.BitVector">BitVector</a></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.BitVector">BitVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a vector with the specified bit vector replacing bits <code>[idx, idx + b.size]</code>.</p>
+    </li><li name="scodec.bits.BitVector#populationCount" visbl="pub" data-isabs="false" fullComment="no" group="bitwise">
+      <a id="populationCount:Long"></a>
+      <a id="populationCount:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">populationCount</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the number of bits that are high.</p>
     </li><li name="scodec.bits.BitVector#reverse" visbl="pub" data-isabs="false" fullComment="no" group="collection">
       <a id="reverse:scodec.bits.BitVector"></a>
       <a id="reverse:BitVector"></a>
@@ -1086,18 +1164,31 @@ forces this <code>BitVector</code> from left to right, halting as soon as it has
               
         </dd></dl></div>
     </li><li name="scodec.bits.BitVector#slice" visbl="pub" data-isabs="false" fullComment="no" group="collection">
-      <a id="slice(from:Int,until:Int):scodec.bits.BitVector"></a>
-      <a id="slice(Int,Int):BitVector"></a>
+      <a id="slice(from:Long,until:Long):scodec.bits.BitVector"></a>
+      <a id="slice(Long,Long):BitVector"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">slice</span><span class="params">(<span name="from">from: <span class="extype" name="scala.Int">Int</span></span>, <span name="until">until: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.BitVector">BitVector</a></span>
+        <span class="name">slice</span><span class="params">(<span name="from">from: <span class="extype" name="scala.Long">Long</span></span>, <span name="until">until: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.BitVector">BitVector</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Returns a vector made up of the bits starting at index <code>from</code> up to index <code>until</code>.</p>
+    </li><li name="scodec.bits.BitVector#splice" visbl="pub" data-isabs="false" fullComment="no" group="collection">
+      <a id="splice(idx:Long,b:scodec.bits.BitVector):scodec.bits.BitVector"></a>
+      <a id="splice(Long,BitVector):BitVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">splice</span><span class="params">(<span name="idx">idx: <span class="extype" name="scala.Long">Long</span></span>, <span name="b">b: <a href="" class="extype" name="scodec.bits.BitVector">BitVector</a></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.BitVector">BitVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a vector with the specified bit vector inserted at the specified index.</p>
     </li><li name="scodec.bits.BitVector#splitAt" visbl="pub" data-isabs="false" fullComment="no" group="collection">
       <a id="splitAt(n:Long):(scodec.bits.BitVector,scodec.bits.BitVector)"></a>
       <a id="splitAt(Long):(BitVector,BitVector)"></a>
@@ -1111,6 +1202,19 @@ forces this <code>BitVector</code> from left to right, halting as soon as it has
       </span>
       </h4>
       <p class="shortcomment cmt">Returns a pair of vectors that is equal to <code>(take(n), drop(n))</code>.</p>
+    </li><li name="scodec.bits.BitVector#startsWith" visbl="pub" data-isabs="false" fullComment="no" group="collection">
+      <a id="startsWith(b:scodec.bits.BitVector):Boolean"></a>
+      <a id="startsWith(BitVector):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">startsWith</span><span class="params">(<span name="b">b: <a href="" class="extype" name="scodec.bits.BitVector">BitVector</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns true if this bit vector starts with the specified vector.</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
