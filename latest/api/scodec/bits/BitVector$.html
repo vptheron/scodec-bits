@@ -35,14 +35,14 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">BitVector</span>
+        <span class="name">BitVector</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Companion for <a href="BitVector.html" class="extype" name="scodec.bits.BitVector">BitVector</a>.
 </p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https:/github.com/scodec/scodec-bits/tree/master/src/main/scala/scodec/bits/BitVector.scala" target="_blank">BitVector.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -60,7 +60,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="scodec.bits.BitVector"><span>BitVector</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="scodec.bits.BitVector"><span>BitVector</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -192,7 +192,7 @@ byte is used of each integral value.</p></div></div>
       </h4>
       <p class="shortcomment cmt">Constructs a <code>BitVector</code> from an <code>Array[Byte]</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>BitVector</code> from an <code>Array[Byte]</code>. The given <code>Array[Byte]</code> is
 is copied to ensure the resulting <code>BitVector</code> is immutable.
-If this is not desired, use <code><a href="#view(bs:Array[Byte]):scodec.bits.BitVector" class="extmbr" name="scodec.bits.BitVector#view">BitVector.view</a></code>.</p></div></div>
+If this is not desired, use <code><a href="#view(bs:Array[Byte],sizeInBits:Long):scodec.bits.BitVector" class="extmbr" name="scodec.bits.BitVector#view">BitVector.view</a></code>.</p></div></div>
     </li><li name="scodec.bits.BitVector#apply" visbl="pub" data-isabs="false" fullComment="yes" group="constructors">
       <a id="apply(buffer:java.nio.ByteBuffer):scodec.bits.BitVector"></a>
       <a id="apply(ByteBuffer):BitVector"></a>
@@ -207,7 +207,7 @@ If this is not desired, use <code><a href="#view(bs:Array[Byte]):scodec.bits.Bit
       </h4>
       <p class="shortcomment cmt">Constructs a <code>BitVector</code> from a <code>ByteBuffer</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>BitVector</code> from a <code>ByteBuffer</code>. The given <code>ByteBuffer</code> is
 is copied to ensure the resulting <code>BitVector</code> is immutable.
-If this is not desired, use <code><a href="#view(bs:Array[Byte]):scodec.bits.BitVector" class="extmbr" name="scodec.bits.BitVector#view">BitVector.view</a></code>.</p></div></div>
+If this is not desired, use <code><a href="#view(bs:Array[Byte],sizeInBits:Long):scodec.bits.BitVector" class="extmbr" name="scodec.bits.BitVector#view">BitVector.view</a></code>.</p></div></div>
     </li><li name="scodec.bits.BitVector#apply" visbl="pub" data-isabs="false" fullComment="yes" group="constructors">
       <a id="apply(bs:scodec.bits.ByteVector):scodec.bits.BitVector"></a>
       <a id="apply(ByteVector):BitVector"></a>
@@ -724,6 +724,21 @@ forcing the stream up to that point.</p><p>Use <code>force</code> if you wish to
 <code>BitVector</code> backed by a balanced tree.
 </p></div></div>
     </li><li name="scodec.bits.BitVector#view" visbl="pub" data-isabs="false" fullComment="yes" group="constructors">
+      <a id="view(bs:Array[Byte],sizeInBits:Long):scodec.bits.BitVector"></a>
+      <a id="view(Array[Byte],Long):BitVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">view</span><span class="params">(<span name="bs">bs: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="sizeInBits">sizeInBits: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <a href="BitVector.html" class="extype" name="scodec.bits.BitVector">BitVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Constructs a <code>BitVector</code> from an <code>Array[Byte]</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a <code>BitVector</code> from an <code>Array[Byte]</code>. Unlike <code>apply</code>, this
+does not make a copy of the input array, so callers should take care
+not to modify the contents of the array passed to this function.</p></div></div>
+    </li><li name="scodec.bits.BitVector#view" visbl="pub" data-isabs="false" fullComment="yes" group="constructors">
       <a id="view(bs:Array[Byte]):scodec.bits.BitVector"></a>
       <a id="view(Array[Byte]):BitVector"></a>
       <h4 class="signature">
@@ -847,7 +862,11 @@ not to modify the contents of the buffer passed to this function.</p></div></div
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

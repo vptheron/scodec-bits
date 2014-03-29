@@ -31,11 +31,11 @@
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">sealed </span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">ByteVector</span><span class="result"> extends <a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a>[<a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a>, <span class="extype" name="scala.Int">Int</span>]</span>
+        <span class="name">ByteVector</span><span class="result"> extends <a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a>[<a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a>, <span class="extype" name="scala.Int">Int</span>] with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -49,11 +49,11 @@ standard scala collections. Use <code>toIndexedSeq</code>, <code>toSeq</code>, o
 to obtain a regular <code>scala.collection</code> type.
 </p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https:/github.com/scodec/scodec-bits/tree/master/src/main/scala/scodec/bits/ByteVector.scala" target="_blank">ByteVector.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a>[<a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a>, <span class="extype" name="scala.Int">Int</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a>[<a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a>, <span class="extype" name="scala.Int">Int</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
                 <span class="toggle diagram-link">Type Hierarchy</span>
                 <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph4" viewBox="0.00 0.00 202.00 120.00" height="120pt" width="202pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 116)" class="graph" id="graph0"><polygon points="-4,4 -4,-116 198,-116 198,4 -4,4" stroke="white" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph4_0"><g id="a_this trait|graph4_0"><a xlink:title="scodec.bits.ByteVector (this trait)" xlink:href="#inheritance-diagram"><polygon points="143.25,-50 50.75,-50 50.75,-24 143.25,-24 143.25,-50" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-43" x="63" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-32.7495" x="82.9312" text-anchor="start">ByteVector</text></a></g></g><!-- node1 --><g class="node trait" id="graph4_1"><g id="a_trait|graph4_1"><a xlink:title="scodec.bits.BitwiseOperations" xlink:href="BitwiseOperations.html#inheritance-diagram"><polygon points="194.25,-112 -0.25,-112 -0.25,-86 194.25,-86 194.25,-112" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-105" x="12" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-94.7495" x="31.7959" text-anchor="start">BitwiseOperations[ByteVector, Int]</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph4_1_0"><g id="a_inheritance|graph4_1_0"><a xlink:title="ByteVector is a subtype of BitwiseOperations[ByteVector, Int]"><path d="M97,-80.6826C97,-70.8961 97,-58.9026 97,-50.1238" stroke="#d4d4d4" fill="none"></path><polygon points="95.2501,-80.8581 97,-85.8581 98.7501,-80.8581 95.2501,-80.8581" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph4" viewBox="0.00 0.00 317.00 120.00" height="120pt" width="317pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 116)" class="graph" id="graph0"><polygon points="-4,4 -4,-116 313,-116 313,4 -4,4" stroke="white" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph4_0"><g id="a_this trait|graph4_0"><a xlink:title="scodec.bits.ByteVector (this trait)" xlink:href="#inheritance-diagram"><polygon points="225.25,-50 132.75,-50 132.75,-24 225.25,-24 225.25,-50" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-43" x="145" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-32.7495" x="164.931" text-anchor="start">ByteVector</text></a></g></g><!-- node1 --><g class="node trait" id="graph4_1"><g id="a_trait|graph4_1"><a xlink:title="scodec.bits.BitwiseOperations" xlink:href="BitwiseOperations.html#inheritance-diagram"><polygon points="194.25,-112 -0.25,-112 -0.25,-86 194.25,-86 194.25,-112" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-105" x="12" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-94.7495" x="31.7959" text-anchor="start">BitwiseOperations[ByteVector, Int]</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph4_1_0"><g id="a_inheritance|graph4_1_0"><a xlink:title="ByteVector is a subtype of BitwiseOperations[ByteVector, Int]"><path d="M117.748,-82.8189C131.59,-72.6906 149.544,-59.5529 162.431,-50.1238" stroke="#d4d4d4" fill="none"></path><polygon points="116.596,-81.4932 113.594,-85.8581 118.663,-84.3178 116.596,-81.4932" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph4_2"><g id="a_trait|graph4_2"><a xlink:title="scala.Serializable"><polygon points="309,-112 213,-112 213,-86 309,-86 309,-112" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-105" x="225" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-94.7495" x="244.764" text-anchor="start">Serializable</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph4_2_0"><g id="a_inheritance|graph4_2_0"><a xlink:title="ByteVector is a subtype of Serializable"><path d="M240.252,-82.8189C226.41,-72.6906 208.456,-59.5529 195.569,-50.1238" stroke="#d4d4d4" fill="none"></path><polygon points="239.337,-84.3178 244.406,-85.8581 241.404,-81.4932 239.337,-84.3178" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
               </div></div>
         
 
@@ -71,7 +71,7 @@ to obtain a regular <code>scala.collection</code> type.
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="scodec.bits.ByteVector"><span>ByteVector</span></li><li class="in" name="scodec.bits.BitwiseOperations"><span>BitwiseOperations</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="scodec.bits.ByteVector"><span>ByteVector</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scodec.bits.BitwiseOperations"><span>BitwiseOperations</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
                 <span class="filtertype">Implicitly<br />
@@ -474,6 +474,32 @@ does not have <code>n</code> bytes or an error occurs while decoding, an error i
       </h4>
       <p class="shortcomment cmt">Returns a vector with the same contents as this vector but with a single compacted node made up
 by evaluating all internal nodes and concatenating their values.</p>
+    </li><li name="scodec.bits.ByteVector#digest" visbl="pub" data-isabs="false" fullComment="yes" group="conversions">
+      <a id="digest(digest:java.security.MessageDigest):scodec.bits.ByteVector"></a>
+      <a id="digest(MessageDigest):ByteVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">digest</span><span class="params">(<span name="digest">digest: <span class="extype" name="java.security.MessageDigest">MessageDigest</span></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Computes a digest of this byte vector.</p><div class="fullcomment"><div class="comment cmt"><p>Computes a digest of this byte vector.</p></div><dl class="paramcmts block"><dt class="param">digest</dt><dd class="cmt"><p>digest to use</p></dd></dl></div>
+    </li><li name="scodec.bits.ByteVector#digest" visbl="pub" data-isabs="false" fullComment="no" group="conversions">
+      <a id="digest(algorithm:String):scodec.bits.ByteVector"></a>
+      <a id="digest(String):ByteVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">digest</span><span class="params">(<span name="algorithm">algorithm: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Computes a digest of this byte vector.</p>
     </li><li name="scodec.bits.ByteVector#drop" visbl="pub" data-isabs="false" fullComment="yes" group="collection">
       <a id="drop(n:Int):scodec.bits.ByteVector"></a>
       <a id="drop(Int):ByteVector"></a>
@@ -897,20 +923,6 @@ by evaluating all internal nodes and concatenating their values.</p>
       </span>
       </h4>
       <p class="shortcomment cmt">Returns the last byte in this vector or returns <code>None</code> if vector is empty.</p>
-    </li><li name="scodec.bits.ByteVector#leftShift" visbl="pub" data-isabs="false" fullComment="yes" group="bitwise">
-      <a id="leftShift(n:Int):scodec.bits.ByteVector"></a>
-      <a id="leftShift(Int):ByteVector"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">leftShift</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Returns a bit vector of the same size with each bit shifted to the left <code>n</code> bits.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bit vector of the same size with each bit shifted to the left <code>n</code> bits.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a> → <a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a></dd></dl></div>
     </li><li name="scodec.bits.ByteVector#length" visbl="pub" data-isabs="false" fullComment="no" group="collection">
       <a id="length:Int"></a>
       <a id="length:Int"></a>
@@ -1074,6 +1086,34 @@ This method returns a view and hence, is O(1). Call <a href="#compact:scodec.bit
       </h4>
       <p class="shortcomment cmt">Returns a bitwise OR of this bit vector with the specified bit vector.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise OR of this bit vector with the specified bit vector.</p><p>The resulting bit vector's size is the minimum of this bit vector's size and the specified bit vector's size.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a> → <a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a></dd></dl></div>
+    </li><li name="scodec.bits.ByteVector#padLeft" visbl="pub" data-isabs="false" fullComment="yes" group="collection">
+      <a id="padLeft(n:Int):scodec.bits.ByteVector"></a>
+      <a id="padLeft(Int):ByteVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">padLeft</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an <code>n</code>-bytes vector whose contents are 0 or more zero bytes followed by this vector's contents.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an <code>n</code>-bytes vector whose contents are 0 or more zero bytes followed by this vector's contents.
+</p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">IllegalArgumentException<p>if <code>n &lt; size</code></p></span></dd></dl></div>
+    </li><li name="scodec.bits.ByteVector#padRight" visbl="pub" data-isabs="false" fullComment="yes" group="collection">
+      <a id="padRight(n:Int):scodec.bits.ByteVector"></a>
+      <a id="padRight(Int):ByteVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">padRight</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an <code>n</code>-byte vector whose contents are this vector's contents followed by 0 or more zero bytes.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an <code>n</code>-byte vector whose contents are this vector's contents followed by 0 or more zero bytes.
+</p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">IllegalArgumentException<p>if <code>n &lt; size</code></p></span></dd></dl></div>
     </li><li name="scodec.bits.ByteVector#padTo" visbl="pub" data-isabs="false" fullComment="yes" group="collection">
       <a id="padTo(n:Int):scodec.bits.ByteVector"></a>
       <a id="padTo(Int):ByteVector"></a>
@@ -1086,21 +1126,7 @@ This method returns a view and hence, is O(1). Call <a href="#compact:scodec.bit
         <span class="name">padTo</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns an <code>n</code>-byte vector whose contents are this vector's contents followed by 0 or more zero bytes.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an <code>n</code>-byte vector whose contents are this vector's contents followed by 0 or more zero bytes.
-</p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">IllegalArgumentException<p>if <code>n &lt; size</code></p></span></dd></dl></div>
-    </li><li name="scodec.bits.ByteVector#padToRight" visbl="pub" data-isabs="false" fullComment="yes" group="collection">
-      <a id="padToRight(n:Int):scodec.bits.ByteVector"></a>
-      <a id="padToRight(Int):ByteVector"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">padToRight</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Returns an <code>n</code>-bytes vector whose contents are 0 or more zero bytes followed by this vector's contents.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an <code>n</code>-bytes vector whose contents are 0 or more zero bytes followed by this vector's contents.
+      <p class="shortcomment cmt">Alias for <code>padRight</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Alias for <code>padRight</code>.
 </p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">IllegalArgumentException<p>if <code>n &lt; size</code></p></span></dd></dl></div>
     </li><li name="scodec.bits.ByteVector#partialCompact" visbl="pub" data-isabs="false" fullComment="no" group="collection">
       <a id="partialCompact(chunkSize:Int):scodec.bits.ByteVector"></a>
@@ -1142,16 +1168,58 @@ This method returns a view and hence, is O(1). Call <a href="#compact:scodec.bit
       </h4>
       <p class="shortcomment cmt">Returns a vector with the bytes of this vector in reverse order.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a vector with the bytes of this vector in reverse order.
 This method returns a view and hence, is O(1). Call <a href="#compact:scodec.bits.ByteVector" class="extmbr" name="scodec.bits.ByteVector#compact">compact</a> generate a new strict vector.</p></div></div>
-    </li><li name="scodec.bits.ByteVector#rightShift" visbl="pub" data-isabs="false" fullComment="yes" group="bitwise">
-      <a id="rightShift(n:Int,signExtension:Boolean):scodec.bits.ByteVector"></a>
-      <a id="rightShift(Int,Boolean):ByteVector"></a>
+    </li><li name="scodec.bits.ByteVector#rotateLeft" visbl="pub" data-isabs="false" fullComment="yes" group="bitwise">
+      <a id="rotateLeft(n:Int):scodec.bits.ByteVector"></a>
+      <a id="rotateLeft(Int):ByteVector"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">rightShift</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>, <span name="signExtension">signExtension: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
+        <span class="name">rotateLeft</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a bit vector of the same size with each bit circularly shifted to the left <code>n</code> bits.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bit vector of the same size with each bit circularly shifted to the left <code>n</code> bits.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a> → <a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a></dd></dl></div>
+    </li><li name="scodec.bits.ByteVector#rotateRight" visbl="pub" data-isabs="false" fullComment="yes" group="bitwise">
+      <a id="rotateRight(n:Int):scodec.bits.ByteVector"></a>
+      <a id="rotateRight(Int):ByteVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rotateRight</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a bit vector of the same size with each bit circularly shifted to the right <code>n</code> bits.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bit vector of the same size with each bit circularly shifted to the right <code>n</code> bits.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a> → <a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a></dd></dl></div>
+    </li><li name="scodec.bits.ByteVector#shiftLeft" visbl="pub" data-isabs="false" fullComment="yes" group="bitwise">
+      <a id="shiftLeft(n:Int):scodec.bits.ByteVector"></a>
+      <a id="shiftLeft(Int):ByteVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">shiftLeft</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a bit vector of the same size with each bit shifted to the left <code>n</code> bits.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bit vector of the same size with each bit shifted to the left <code>n</code> bits.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a> → <a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a></dd></dl></div>
+    </li><li name="scodec.bits.ByteVector#shiftRight" visbl="pub" data-isabs="false" fullComment="yes" group="bitwise">
+      <a id="shiftRight(n:Int,signExtension:Boolean):scodec.bits.ByteVector"></a>
+      <a id="shiftRight(Int,Boolean):ByteVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">shiftRight</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>, <span name="signExtension">signExtension: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Returns a bit vector of the same size with each bit shifted to the right <code>n</code> bits.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bit vector of the same size with each bit shifted to the right <code>n</code> bits.
@@ -1520,6 +1588,19 @@ contents are shown.</p></div><dl class="attributes block"> <dt>Definition Classe
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="scodec.bits.ByteVector#writeReplace" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="writeReplace():AnyRef"></a>
+      <a id="writeReplace():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeReplace</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li name="scodec.bits.ByteVector#xor" visbl="pub" data-isabs="false" fullComment="yes" group="bitwise">
       <a id="xor(other:scodec.bits.ByteVector):scodec.bits.ByteVector"></a>
       <a id="xor(ByteVector):ByteVector"></a>
@@ -1689,7 +1770,11 @@ This method returns a view and hence, is O(1). Call <a href="#compact:scodec.bit
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scodec.bits.BitwiseOperations">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scodec.bits.BitwiseOperations">
               <h3>Inherited from <a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a>[<a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a>, <span class="extype" name="scala.Int">Int</span>]</h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>

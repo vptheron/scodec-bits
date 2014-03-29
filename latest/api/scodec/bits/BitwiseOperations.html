@@ -111,19 +111,6 @@
       </h4>
       <p class="shortcomment cmt">Returns a bitwise AND of this value with the specified value.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise AND of this value with the specified value.</p><p>The resulting value's size is the minimum of this value's size and the specified value's size.
 </p></div></div>
-    </li><li name="scodec.bits.BitwiseOperations#leftShift" visbl="pub" data-isabs="true" fullComment="no" group="bitwise">
-      <a id="leftShift(n:Idx):Repr"></a>
-      <a id="leftShift(Idx):Repr"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">leftShift</span><span class="params">(<span name="n">n: <span class="extype" name="scodec.bits.BitwiseOperations.Idx">Idx</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Returns a value of the same size with each bit shifted to the left <code>n</code> bits.</p>
     </li><li name="scodec.bits.BitwiseOperations#not" visbl="pub" data-isabs="true" fullComment="no" group="bitwise">
       <a id="not:Repr"></a>
       <a id="not:Repr"></a>
@@ -151,16 +138,55 @@
       </h4>
       <p class="shortcomment cmt">Returns a bitwise OR of this value with the specified value.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise OR of this value with the specified value.</p><p>The resulting value's size is the minimum of this value's size and the specified value's size.
 </p></div></div>
-    </li><li name="scodec.bits.BitwiseOperations#rightShift" visbl="pub" data-isabs="true" fullComment="yes" group="bitwise">
-      <a id="rightShift(n:Idx,signExtension:Boolean):Repr"></a>
-      <a id="rightShift(Idx,Boolean):Repr"></a>
+    </li><li name="scodec.bits.BitwiseOperations#rotateLeft" visbl="pub" data-isabs="true" fullComment="no" group="bitwise">
+      <a id="rotateLeft(n:Idx):Repr"></a>
+      <a id="rotateLeft(Idx):Repr"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">rightShift</span><span class="params">(<span name="n">n: <span class="extype" name="scodec.bits.BitwiseOperations.Idx">Idx</span></span>, <span name="signExtension">signExtension: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
+        <span class="name">rotateLeft</span><span class="params">(<span name="n">n: <span class="extype" name="scodec.bits.BitwiseOperations.Idx">Idx</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a value of the same size with each bit circularly shifted to the left <code>n</code> bits.</p>
+    </li><li name="scodec.bits.BitwiseOperations#rotateRight" visbl="pub" data-isabs="true" fullComment="no" group="bitwise">
+      <a id="rotateRight(n:Idx):Repr"></a>
+      <a id="rotateRight(Idx):Repr"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rotateRight</span><span class="params">(<span name="n">n: <span class="extype" name="scodec.bits.BitwiseOperations.Idx">Idx</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a value of the same size with each bit circularly shifted to the right <code>n</code> bits.</p>
+    </li><li name="scodec.bits.BitwiseOperations#shiftLeft" visbl="pub" data-isabs="true" fullComment="no" group="bitwise">
+      <a id="shiftLeft(n:Idx):Repr"></a>
+      <a id="shiftLeft(Idx):Repr"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">shiftLeft</span><span class="params">(<span name="n">n: <span class="extype" name="scodec.bits.BitwiseOperations.Idx">Idx</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a value of the same size with each bit shifted to the left <code>n</code> bits.</p>
+    </li><li name="scodec.bits.BitwiseOperations#shiftRight" visbl="pub" data-isabs="true" fullComment="yes" group="bitwise">
+      <a id="shiftRight(n:Idx,signExtension:Boolean):Repr"></a>
+      <a id="shiftRight(Idx,Boolean):Repr"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">shiftRight</span><span class="params">(<span name="n">n: <span class="extype" name="scodec.bits.BitwiseOperations.Idx">Idx</span></span>, <span name="signExtension">signExtension: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Returns a value of the same size with each bit shifted to the right <code>n</code> bits.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a value of the same size with each bit shifted to the right <code>n</code> bits.

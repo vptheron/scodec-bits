@@ -101,7 +101,7 @@
       </h4>
       <p class="comment cmt">Provides the <code>bin</code> string interpolator, which returns <code>BitVector</code> instances from binary strings.</p>
     </li><li name="scodec.bits.BitVector" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="BitVectorextendsBitwiseOperations[scodec.bits.BitVector,Long]"></a>
+      <a id="BitVectorextendsBitwiseOperations[scodec.bits.BitVector,Long]withSerializable"></a>
       <a id="BitVector:BitVector"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -109,7 +109,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="BitVector.html"><span class="name">BitVector</span></a><span class="result"> extends <a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a>[<a href="BitVector.html" class="extype" name="scodec.bits.BitVector">BitVector</a>, <span class="extype" name="scala.Long">Long</span>]</span>
+        <a href="BitVector.html"><span class="name">BitVector</span></a><span class="result"> extends <a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a>[<a href="BitVector.html" class="extype" name="scodec.bits.BitVector">BitVector</a>, <span class="extype" name="scala.Long">Long</span>] with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Persistent vector of bits, stored as bytes.</p>
@@ -140,15 +140,15 @@
       </h4>
       <p class="comment cmt">Enumeration of byte ordering.</p>
     </li><li name="scodec.bits.ByteVector" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ByteVectorextendsBitwiseOperations[scodec.bits.ByteVector,Int]"></a>
+      <a id="ByteVectorextendsBitwiseOperations[scodec.bits.ByteVector,Int]withSerializable"></a>
       <a id="ByteVector:ByteVector"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">sealed </span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="ByteVector.html"><span class="name">ByteVector</span></a><span class="result"> extends <a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a>[<a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a>, <span class="extype" name="scala.Int">Int</span>]</span>
+        <a href="ByteVector.html"><span class="name">ByteVector</span></a><span class="result"> extends <a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a>[<a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a>, <span class="extype" name="scala.Int">Int</span>] with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">An immutable vector of bytes, backed by a balanced binary tree of
@@ -195,7 +195,7 @@ chunks.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="BitVector$.html"><span class="name">BitVector</span></a>
+        <a href="BitVector$.html"><span class="name">BitVector</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Companion for <a href="BitVector.html" class="extype" name="scodec.bits.BitVector">BitVector</a>.</p>
@@ -221,7 +221,7 @@ chunks.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ByteVector$.html"><span class="name">ByteVector</span></a>
+        <a href="ByteVector$.html"><span class="name">ByteVector</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Companion for <a href="ByteVector.html" class="extype" name="scodec.bits.ByteVector">ByteVector</a>.</p>
