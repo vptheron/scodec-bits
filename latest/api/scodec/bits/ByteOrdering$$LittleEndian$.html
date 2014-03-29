@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Bases - scodec.bits.Bases</title>
-          <meta name="description" content="Bases - scodec.bits.Bases" />
-          <meta name="keywords" content="Bases scodec.bits.Bases" />
+          <title>LittleEndian - scodec.bits.ByteOrdering.LittleEndian</title>
+          <meta name="description" content="LittleEndian - scodec.bits.ByteOrdering.LittleEndian" />
+          <meta name="keywords" content="LittleEndian scodec.bits.ByteOrdering.LittleEndian" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../index.html';
-            var hash = 'scodec.bits.Bases$';
+            var hash = 'scodec.bits.ByteOrdering$$LittleEndian$';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -25,8 +25,8 @@
         <body class="value">
       <div id="definition">
         <img src="../../lib/object_big.png" />
-        <p id="owner"><a href="../package.html" class="extype" name="scodec">scodec</a>.<a href="package.html" class="extype" name="scodec.bits">bits</a></p>
-        <h1>Bases</h1>
+        <p id="owner"><a href="../package.html" class="extype" name="scodec">scodec</a>.<a href="package.html" class="extype" name="scodec.bits">bits</a>.<a href="ByteOrdering$.html" class="extype" name="scodec.bits.ByteOrdering">ByteOrdering</a></p>
+        <h1>LittleEndian</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,18 +35,14 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">Bases</span>
+        <span class="name">LittleEndian</span><span class="result"> extends <a href="ByteOrdering.html" class="extype" name="scodec.bits.ByteOrdering">ByteOrdering</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides types related to base conversion -- e.g., binary, hexadecimal, and base 64.</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https:/github.com/scodec/scodec-bits/tree/master/src/main/scala/scodec/bits/Bases.scala" target="_blank">Bases.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Byte ordering where the least significant byte is at the smallest address.</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https:/github.com/scodec/scodec-bits/tree/master/src/main/scala/scodec/bits/ByteOrdering.scala" target="_blank">ByteOrdering.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
-        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
-                <span class="toggle diagram-link">Content Hierarchy</span>
-                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
-                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph8" viewBox="0.00 0.00 376.00 158.00" height="158pt" width="376pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 154)" class="graph" id="graph0"><polygon points="-4,4 -4,-154 372,-154 372,4 -4,4" stroke="white" fill="white"></polygon><!-- node0 --><g class="node trait" id="graph8_0"><g id="a_trait|graph8_0"><a xlink:title="scodec.bits.Bases.Base64Alphabet" xlink:href="Bases$$Base64Alphabet.html#inheritance-diagram"><polygon points="368,-26 250,-26 250,-0 368,-0 368,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-19" x="262" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-8.74951" x="281.914" text-anchor="start">Base64Alphabet</text></a></g></g><!-- node1 --><g class="node trait" id="graph8_1"><g id="a_trait|graph8_1"><a xlink:title="scodec.bits.Bases.HexAlphabet" xlink:href="Bases$$HexAlphabet.html#inheritance-diagram"><polygon points="102,-88 0,-88 0,-62 102,-62 102,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-81" x="12" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="31.9805" text-anchor="start">HexAlphabet</text></a></g></g><!-- node2 --><g class="node trait" id="graph8_2"><g id="a_trait|graph8_2"><a xlink:title="scodec.bits.Bases.BinaryAlphabet" xlink:href="Bases$$BinaryAlphabet.html#inheritance-diagram"><polygon points="232,-88 120,-88 120,-62 232,-62 232,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-81" x="132" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="151.7" text-anchor="start">BinaryAlphabet</text></a></g></g><!-- node3 --><g class="node trait" id="graph8_3"><g id="a_trait|graph8_3"><a xlink:title="scodec.bits.Bases.PaddedAlphabet" xlink:href="Bases$$PaddedAlphabet.html#inheritance-diagram"><polygon points="368,-88 250,-88 250,-62 368,-62 368,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-81" x="262" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="281.633" text-anchor="start">PaddedAlphabet</text></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph8_3_0"><g id="a_inheritance|graph8_3_0"><a xlink:title="Base64Alphabet is a subtype of PaddedAlphabet"><path d="M309,-56.6826C309,-46.8961 309,-34.9026 309,-26.1238" stroke="#d4d4d4" fill="none"></path><polygon points="307.25,-56.8581 309,-61.8581 310.75,-56.8581 307.25,-56.8581" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node trait" id="graph8_4"><g id="a_trait|graph8_4"><a xlink:title="scodec.bits.Bases.Alphabet" xlink:href="Bases$$Alphabet.html#inheritance-diagram"><polygon points="218,-150 134,-150 134,-124 218,-124 218,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-143" x="146" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="165.872" text-anchor="start">Alphabet</text></a></g></g><!-- node4&#45;&gt;node1 --><g class="edge inheritance" id="graph8_4_1"><g id="a_inheritance|graph8_4_1"><a xlink:title="HexAlphabet is a subtype of Alphabet"><path d="M145.997,-121.599C124.693,-111.373 96.41,-97.7968 76.258,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="145.439,-123.272 150.704,-123.858 146.954,-120.117 145.439,-123.272" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4&#45;&gt;node2 --><g class="edge inheritance" id="graph8_4_2"><g id="a_inheritance|graph8_4_2"><a xlink:title="BinaryAlphabet is a subtype of Alphabet"><path d="M176,-118.683C176,-108.896 176,-96.9026 176,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="174.25,-118.858 176,-123.858 177.75,-118.858 174.25,-118.858" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4&#45;&gt;node3 --><g class="edge inheritance" id="graph8_4_3"><g id="a_inheritance|graph8_4_3"><a xlink:title="PaddedAlphabet is a subtype of Alphabet"><path d="M207.638,-121.727C230.338,-111.487 260.594,-97.8374 282.125,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="206.753,-120.207 202.915,-123.858 208.192,-123.397 206.753,-120.207" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-              </div></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="ByteOrdering.html" class="extype" name="scodec.bits.ByteOrdering">ByteOrdering</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -63,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="scodec.bits.Bases"><span>Bases</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="scodec.bits.ByteOrdering.LittleEndian"><span>LittleEndian</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scodec.bits.ByteOrdering"><span>ByteOrdering</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -83,75 +79,7 @@
         <div id="allMembers">
         
 
-        <div id="types" class="types members">
-              <h3>Type Members</h3>
-              <ol><li name="scodec.bits.Bases.Alphabet" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="AlphabetextendsAnyRef"></a>
-      <a id="Alphabet:Alphabet"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="Bases$$Alphabet.html"><span class="name">Alphabet</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Partial mapping between characters and indices used in base conversions.</p>
-    </li><li name="scodec.bits.Bases.Base64Alphabet" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="Base64AlphabetextendsBases.PaddedAlphabet"></a>
-      <a id="Base64Alphabet:Base64Alphabet"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="Bases$$Base64Alphabet.html"><span class="name">Base64Alphabet</span></a><span class="result"> extends <a href="Bases$$PaddedAlphabet.html" class="extype" name="scodec.bits.Bases.PaddedAlphabet">PaddedAlphabet</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">An alphabet that supports base 64 conversion.</p>
-    </li><li name="scodec.bits.Bases.BinaryAlphabet" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="BinaryAlphabetextendsBases.Alphabet"></a>
-      <a id="BinaryAlphabet:BinaryAlphabet"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="Bases$$BinaryAlphabet.html"><span class="name">BinaryAlphabet</span></a><span class="result"> extends <a href="Bases$$Alphabet.html" class="extype" name="scodec.bits.Bases.Alphabet">Alphabet</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">An alphabet that supports binary conversion.</p>
-    </li><li name="scodec.bits.Bases.HexAlphabet" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="HexAlphabetextendsBases.Alphabet"></a>
-      <a id="HexAlphabet:HexAlphabet"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="Bases$$HexAlphabet.html"><span class="name">HexAlphabet</span></a><span class="result"> extends <a href="Bases$$Alphabet.html" class="extype" name="scodec.bits.Bases.Alphabet">Alphabet</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">An alphabet that supports hexadecimal conversion.</p>
-    </li><li name="scodec.bits.Bases.PaddedAlphabet" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="PaddedAlphabetextendsBases.Alphabet"></a>
-      <a id="PaddedAlphabet:PaddedAlphabet"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="Bases$$PaddedAlphabet.html"><span class="name">PaddedAlphabet</span></a><span class="result"> extends <a href="Bases$$Alphabet.html" class="extype" name="scodec.bits.Bases.Alphabet">Alphabet</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">An alphabet that supports padding with a pad character.</p>
-    </li></ol>
-            </div>
+        
 
         
 
@@ -222,19 +150,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="scodec.bits.Bases.Alphabets" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Alphabets"></a>
-      <a id="Alphabets:Alphabets"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Bases$$Alphabets$.html"><span class="name">Alphabets</span></a>
-      </span>
-      </h4>
-      <p class="comment cmt">Predefined alphabets for use in base conversions.</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -325,19 +240,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hashCode():Int"></a>
-      <a id="hashCode():Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -403,19 +305,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toString():String"></a>
-      <a id="toString():String"></a>
+    </li><li name="scodec.bits.ByteOrdering.LittleEndian#toJava" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toJava:java.nio.ByteOrder"></a>
+      <a id="toJava:ByteOrder"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">toJava</span><span class="result">: <span class="extype" name="java.nio.ByteOrder">ByteOrder</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scodec.bits.ByteOrdering.LittleEndian">LittleEndian</a> → <a href="ByteOrdering.html" class="extype" name="scodec.bits.ByteOrdering">ByteOrdering</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -482,7 +384,17 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="scodec.bits.ByteOrdering">
+              <h3>Inherited from <a href="ByteOrdering.html" class="extype" name="scodec.bits.ByteOrdering">ByteOrdering</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

@@ -114,18 +114,31 @@
       </h4>
       <p class="comment cmt">Persistent vector of bits, stored as bytes.</p>
     </li><li name="scodec.bits.BitwiseOperations" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="BitwiseOperations[Repr,Idx]extendsAnyRef"></a>
-      <a id="BitwiseOperations[Repr,Idx]:BitwiseOperations[Repr,Idx]"></a>
+      <a id="BitwiseOperations[Repr&lt;:scodec.bits.BitwiseOperations[Repr,Idx],Idx]extendsAnyRef"></a>
+      <a id="BitwiseOperations[Repr&lt;:BitwiseOperations[Repr,Idx],Idx]:BitwiseOperations[Repr,Idx]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="BitwiseOperations.html"><span class="name">BitwiseOperations</span></a><span class="tparams">[<span name="Repr">Repr</span>, <span name="Idx">Idx</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="BitwiseOperations.html"><span class="name">BitwiseOperations</span></a><span class="tparams">[<span name="Repr">Repr &lt;: <a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a>[<span class="extype" name="scodec.bits.BitwiseOperations.Repr">Repr</span>, <span class="extype" name="scodec.bits.BitwiseOperations.Idx">Idx</span>]</span>, <span name="Idx">Idx</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       <p class="comment cmt">Bitwise operations on a value of type <code>Repr</code>.</p>
+    </li><li name="scodec.bits.ByteOrdering" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ByteOrderingextendsAnyRef"></a>
+      <a id="ByteOrdering:ByteOrdering"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ByteOrdering.html"><span class="name">ByteOrdering</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Enumeration of byte ordering.</p>
     </li><li name="scodec.bits.ByteVector" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ByteVectorextendsBitwiseOperations[scodec.bits.ByteVector,Int]"></a>
       <a id="ByteVector:ByteVector"></a>
@@ -186,6 +199,19 @@ chunks.</p>
       </span>
       </h4>
       <p class="comment cmt">Companion for <a href="BitVector.html" class="extype" name="scodec.bits.BitVector">BitVector</a>.</p>
+    </li><li name="scodec.bits.ByteOrdering" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ByteOrdering"></a>
+      <a id="ByteOrdering:ByteOrdering"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ByteOrdering$.html"><span class="name">ByteOrdering</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Companion for <a href="ByteOrdering.html" class="extype" name="scodec.bits.ByteOrdering">ByteOrdering</a>.</p>
     </li><li name="scodec.bits.ByteVector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ByteVector"></a>
       <a id="ByteVector:ByteVector"></a>
@@ -212,6 +238,19 @@ chunks.</p>
       </span>
       </h4>
       <p class="comment cmt">Macros that support binary and hexadecimal literals.</p>
+    </li><li name="scodec.bits.crc" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="crc"></a>
+      <a id="crc:crc"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="crc$.html"><span class="name">crc</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides support for calculating cyclic redundancy checks.</p>
     </li></ol>
             </div>
 

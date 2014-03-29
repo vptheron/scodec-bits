@@ -383,6 +383,19 @@ to obtain a regular <code>scala.collection</code> type.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scodec.bits.ByteVector#bits" visbl="pub" data-isabs="false" fullComment="no" group="conversions">
+      <a id="bits:scodec.bits.BitVector"></a>
+      <a id="bits:BitVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bits</span><span class="result">: <a href="BitVector.html" class="extype" name="scodec.bits.BitVector">BitVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Alias for <a href="#toBitVector:scodec.bits.BitVector" class="extmbr" name="scodec.bits.ByteVector#toBitVector">toBitVector</a>.</p>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -752,6 +765,34 @@ by evaluating all internal nodes and concatenating their values.</p>
       </span>
       </h4>
       <p class="shortcomment cmt">Returns the first byte of this vector or <code>None</code> if vector is emtpy.</p>
+    </li><li name="scodec.bits.BitwiseOperations#iff" visbl="pub" data-isabs="false" fullComment="yes" group="bitwise">
+      <a id="iff(other:Repr):Repr"></a>
+      <a id="iff(ByteVector):ByteVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">iff</span><span class="params">(<span name="other">other: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a bitwise if-and-only-if of this bit vector with the specified bit vector.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise if-and-only-if of this bit vector with the specified bit vector.</p><p>The resulting bit vector's size is the minimum of this bit vector's size and the specified bit vector's size.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a></dd></dl></div>
+    </li><li name="scodec.bits.BitwiseOperations#implies" visbl="pub" data-isabs="false" fullComment="yes" group="bitwise">
+      <a id="implies(other:Repr):Repr"></a>
+      <a id="implies(ByteVector):ByteVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">implies</span><span class="params">(<span name="other">other: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a bitwise implication of this bit vector with the specified bit vector.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise implication of this bit vector with the specified bit vector.</p><p>The resulting bit vector's size is the minimum of this bit vector's size and the specified bit vector's size.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a></dd></dl></div>
     </li><li name="scodec.bits.ByteVector#indexOfSlice" visbl="pub" data-isabs="false" fullComment="yes" group="collection">
       <a id="indexOfSlice(slice:scodec.bits.ByteVector,from:Int):Int"></a>
       <a id="indexOfSlice(ByteVector,Int):Int"></a>
@@ -925,6 +966,20 @@ This method returns a view and hence, is O(1). Call <a href="#compact:scodec.bit
       <p class="shortcomment cmt">Returns a vector where each byte is the result of applying the specified function to the corresponding byte in this vector.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a vector where each byte is the result of applying the specified function to the corresponding byte in this vector.
 Only the least significant byte is used (the three most significant bytes are ignored).
 This method returns a view and hence, is O(1). Call <a href="#compact:scodec.bits.ByteVector" class="extmbr" name="scodec.bits.ByteVector#compact">compact</a> generate a new strict vector.</p></div></div>
+    </li><li name="scodec.bits.BitwiseOperations#nand" visbl="pub" data-isabs="false" fullComment="yes" group="bitwise">
+      <a id="nand(other:Repr):Repr"></a>
+      <a id="nand(ByteVector):ByteVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nand</span><span class="params">(<span name="other">other: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a bitwise NAND of this bit vector with the specified bit vector.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise NAND of this bit vector with the specified bit vector.</p><p>The resulting bit vector's size is the minimum of this bit vector's size and the specified bit vector's size.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -951,6 +1006,20 @@ This method returns a view and hence, is O(1). Call <a href="#compact:scodec.bit
       </span>
       </h4>
       <p class="shortcomment cmt">Returns true if this vector has a non-zero number of bytes.</p>
+    </li><li name="scodec.bits.BitwiseOperations#nor" visbl="pub" data-isabs="false" fullComment="yes" group="bitwise">
+      <a id="nor(other:Repr):Repr"></a>
+      <a id="nor(ByteVector):ByteVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nor</span><span class="params">(<span name="other">other: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>)</span><span class="result">: <a href="" class="extype" name="scodec.bits.ByteVector">ByteVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a bitwise NOR of this bit vector with the specified bit vector.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bitwise NOR of this bit vector with the specified bit vector.</p><p>The resulting bit vector's size is the minimum of this bit vector's size and the specified bit vector's size.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BitwiseOperations.html" class="extype" name="scodec.bits.BitwiseOperations">BitwiseOperations</a></dd></dl></div>
     </li><li name="scodec.bits.ByteVector#not" visbl="pub" data-isabs="false" fullComment="yes" group="bitwise">
       <a id="not:scodec.bits.ByteVector"></a>
       <a id="not:ByteVector"></a>
@@ -1271,7 +1340,7 @@ This method returns a view and hence, is O(1). Call <a href="#compact:scodec.bit
         <span class="name">toBitVector</span><span class="result">: <a href="BitVector.html" class="extype" name="scodec.bits.BitVector">BitVector</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p>
+      <p class="shortcomment cmt">Converts the contents of this vector to a bit vector of <code>size * 8</code> bits.</p>
     </li><li name="scodec.bits.ByteVector#toByteBuffer" visbl="pub" data-isabs="false" fullComment="yes" group="conversions">
       <a id="toByteBuffer:java.nio.ByteBuffer"></a>
       <a id="toByteBuffer:ByteBuffer"></a>
