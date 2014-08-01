@@ -40,7 +40,7 @@
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Companion for <a href="BitVector.html" class="extype" name="scodec.bits.BitVector">BitVector</a>.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https:/github.com/scodec/scodec-bits/tree/master/src/main/scala/scodec/bits/BitVector.scala" target="_blank">BitVector.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scodec/scodec-bits/tree/master/src/main/scala/scodec/bits/BitVector.scala" target="_blank">BitVector.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -473,6 +473,34 @@ effects from being observed. Streaming applications should take care to ensure
 that the head of the stream is not left on the stack, as this will cause the entire
 stream to be retained in memory.
 </p></div><dl class="paramcmts block"><dt class="param">chunkSizeInBytes</dt><dd class="cmt"><p>the number of bytes to read in each chunk</p></dd></dl></div>
+    </li><li name="scodec.bits.BitVector#fromInt" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fromInt(i:Int,size:Int,ordering:scodec.bits.ByteOrdering):scodec.bits.BitVector"></a>
+      <a id="fromInt(Int,Int,ByteOrdering):BitVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fromInt</span><span class="params">(<span name="i">i: <span class="extype" name="scala.Int">Int</span></span>, <span name="size">size: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">32</span></span>, <span name="ordering">ordering: <a href="ByteOrdering.html" class="extype" name="scodec.bits.ByteOrdering">ByteOrdering</a> = <span class="symbol"><span class="name"><a href="ByteOrdering$.html">ByteOrdering.BigEndian</a></span></span></span>)</span><span class="result">: <a href="BitVector.html" class="extype" name="scodec.bits.BitVector">BitVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Constructs a bit vector with the 2's complement encoding of the specified value.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a bit vector with the 2's complement encoding of the specified value.</p></div><dl class="paramcmts block"><dt class="param">i</dt><dd class="cmt"><p>value to encode</p></dd><dt class="param">size</dt><dd class="cmt"><p>size of vector (&lt;= 32)</p></dd><dt class="param">ordering</dt><dd class="cmt"><p>byte ordering of vector
+</p></dd></dl></div>
+    </li><li name="scodec.bits.BitVector#fromLong" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fromLong(l:Long,size:Int,ordering:scodec.bits.ByteOrdering):scodec.bits.BitVector"></a>
+      <a id="fromLong(Long,Int,ByteOrdering):BitVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fromLong</span><span class="params">(<span name="l">l: <span class="extype" name="scala.Long">Long</span></span>, <span name="size">size: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">64</span></span>, <span name="ordering">ordering: <a href="ByteOrdering.html" class="extype" name="scodec.bits.ByteOrdering">ByteOrdering</a> = <span class="symbol"><span class="name"><a href="ByteOrdering$.html">ByteOrdering.BigEndian</a></span></span></span>)</span><span class="result">: <a href="BitVector.html" class="extype" name="scodec.bits.BitVector">BitVector</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Constructs a bit vector with the 2's complement encoding of the specified value.</p><div class="fullcomment"><div class="comment cmt"><p>Constructs a bit vector with the 2's complement encoding of the specified value.</p></div><dl class="paramcmts block"><dt class="param">size</dt><dd class="cmt"><p>size of vector (&lt;= 64)</p></dd><dt class="param">ordering</dt><dd class="cmt"><p>byte ordering of vector
+</p></dd></dl></div>
     </li><li name="scodec.bits.BitVector#fromMmap" visbl="pub" data-isabs="false" fullComment="yes" group="constructors">
       <a id="fromMmap(in:java.nio.channels.FileChannel,chunkSizeInBytes:Int):scodec.bits.BitVector"></a>
       <a id="fromMmap(FileChannel,Int):BitVector"></a>
