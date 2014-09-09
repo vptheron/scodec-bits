@@ -45,11 +45,15 @@ class BitVectorTest extends BitsSuite {
   }
 
   test("acquire/take consistency") {
-    def check(bits: BitVector, n: Long): Unit =
-      bits.acquire(n) match {
-        case Left(_) => bits.size < n
+    def check(bits: BitVector, n: Long): Unit = {
+      val b = bits.acquire(n)
+      b match {
+        case Left(_) => bits.size should be < n
         case Right(hd) => hd shouldBe bits.take(n)
       }
+      bits.acquireThen(n)(Left(_),Right(_)) shouldBe b
+      bits.consumeThen(n)(Left(_),(a,b) => Right((b,a))) shouldBe bits.consume(n)(Right(_))
+    }
 
     forAll (bitVectorWithTakeIndex) { case (bits, ind) =>
       check(bits, ind)

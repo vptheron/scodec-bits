@@ -245,9 +245,9 @@ sealed trait BitVector extends BitwiseOperations[BitVector, Long] with Serializa
       if (npos <= 0) cur
       else if (cur.sizeLessThanOrEqual(npos)) BitVector.empty
       else cur match {
-        case Bytes(bs, m) =>
+        case cur@Bytes(bs, m) =>
           if (npos % 8 == 0) toBytes(bs.drop((npos / 8).toInt), m - npos)
-          else Drop(cur.asInstanceOf[Bytes], npos)
+          else Drop(cur, npos)
         case Append(l, r) =>
           if (l.sizeLessThanOrEqual(npos)) go(r, npos - l.size)
           else Append(l.drop(npos), r) // not stack safe for left-recursion, but we disallow that
@@ -299,11 +299,7 @@ sealed trait BitVector extends BitwiseOperations[BitVector, Long] with Serializa
       else if (cur.sizeLessThanOrEqual(npos)) finish(accL, cur)
       else cur match {
         case s@Suspend(_) => go(accL, s.underlying, npos)
-        case Bytes(underlying, m) =>
-          // eagerly trim from underlying here
-          val m2 = npos min m
-          val underlyingN = bytesNeededForBits(m2).toInt
-          finish(accL, toBytes(underlying.take(underlyingN), m2)) // call to take stack safe here, since that is a Bytes
+        case Bytes(underlying, m) => finish(accL, toBytes(underlying, npos min m))
         case Drop(underlying, m) => finish(accL, underlying.take(m + npos).drop(m))
         case Append(l, r) =>
           if (l.sizeGreaterThanOrEqual(npos)) go(accL, l, npos)
@@ -353,6 +349,16 @@ sealed trait BitVector extends BitwiseOperations[BitVector, Long] with Serializa
     else Left(s"cannot acquire $n bits from a vector that contains $size bits")
 
   /**
+   * Like `aquire`, but immediately consumes the `Either` via the pair of functions `err` and `f`.
+   *
+   * @see acquire
+   * @group collection
+   */
+  final def acquireThen[R](n: Long)(err: String => R, f: BitVector => R): R =
+    if (sizeGreaterThanOrEqual(n)) f(take(n))
+    else err(s"cannot acquire $n bits from a vector that contains $size bits")
+
+  /**
    * Consumes the first `n` bits of this vector and decodes them with the specified function,
    * resulting in a vector of the remaining bits and the decoded value. If this vector
    * does not have `n` bits or an error occurs while decoding, an error is returned instead.
@@ -364,6 +370,19 @@ sealed trait BitVector extends BitwiseOperations[BitVector, Long] with Serializa
       toDecode <- acquire(n).right
       decoded <- decode(toDecode).right
     } yield (drop(n), decoded)
+
+  /**
+   * If this vector has at least `n` bits, returns `f(take(n),drop(n))`,
+   * otherwise calls `err` with a meaningful error message. This function can be used
+   * to avoid intermediate allocations of `Either` objects when using `acquire` or `consume`
+   * directly.
+   *
+   * @see acquireThen
+   * @group collection
+   */
+  final def consumeThen[R](n: Long)(err: String => R, f: (BitVector,BitVector) => R): R =
+    if (sizeGreaterThanOrEqual(n)) f(take(n), drop(n)) // todo unsafeTake, unsafeDrop
+    else err(s"cannot acquire $n bits from a vector that contains $size bits")
 
   /**
    * Returns true if this bit vector starts with the specified vector.
@@ -790,18 +809,18 @@ sealed trait BitVector extends BitwiseOperations[BitVector, Long] with Serializa
     ordering match {
       case ByteOrdering.BigEndian =>
         @annotation.tailrec
-        def go(bv: ByteVector): Unit =
-          if (bv.nonEmpty) {
-            result = (result << 8) | (0x0ff & bv.head)
-            go(bv.tail)
+        def go(bv: ByteVector, i: Int): Unit =
+          if (i < bv.size) {
+            result = (result << 8) | (0x0ff & bv.get(i))
+            go(bv, i + 1)
           }
-        go(this.bytes)
+        go(this.bytes, 0)
       case ByteOrdering.LittleEndian =>
         @annotation.tailrec
         def go(bv: ByteVector, i: Int): Unit =
-          if (bv.nonEmpty) {
-            result = result | ((0x0ff & bv.head) << (8 * i))
-            go(bv.tail, i + 1)
+          if (i < bv.size) {
+            result = result | ((0x0ff & bv.get(i)) << (8 * i))
+            go(bv, i + 1)
           }
         go(this.bytes, 0)
     }
@@ -830,18 +849,18 @@ sealed trait BitVector extends BitwiseOperations[BitVector, Long] with Serializa
     ordering match {
       case ByteOrdering.BigEndian =>
         @annotation.tailrec
-        def go(bv: ByteVector): Unit =
-          if (bv.nonEmpty) {
-            result = (result << 8) | (0x0ffL & bv.head)
-            go(bv.tail)
+        def go(bv: ByteVector, i: Int): Unit =
+          if (i < bv.size) {
+            result = (result << 8) | (0x0ffL & bv.get(i))
+            go(bv, i + 1)
           }
-        go(this.bytes)
+        go(this.bytes, 0)
       case ByteOrdering.LittleEndian =>
         @annotation.tailrec
         def go(bv: ByteVector, i: Int): Unit =
-          if (bv.nonEmpty) {
-            result = result | ((0x0ffL & bv.head) << (8 * i))
-            go(bv.tail, i + 1)
+          if (i < bv.size) {
+            result = result | ((0x0ffL & bv.get(i)) << (8 * i))
+            go(bv, i + 1)
           }
         go(this.bytes, 0)
     }
