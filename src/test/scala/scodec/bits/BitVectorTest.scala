@@ -105,6 +105,17 @@ class BitVectorTest extends BitsSuite {
     vec(15) should be (true)
   }
 
+  test("getByte") {
+    forAll { (x: BitVector) =>
+      val bytes = x.bytes
+      val aligned = x.align
+      (0L until ((x.size + 7) / 8)).foreach { i =>
+        bytes(i.toInt) shouldBe x.getByte(i)
+        aligned.getByte(i) shouldBe x.getByte(i)
+      }
+    }
+  }
+
   test("updated") {
     val vec = BitVector.low(16)
     vec.set(6).get(6) should be (true)

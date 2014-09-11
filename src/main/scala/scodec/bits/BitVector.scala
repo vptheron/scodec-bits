@@ -141,6 +141,15 @@ sealed trait BitVector extends BitwiseOperations[BitVector, Long] with Serializa
   def get(n: Long): Boolean
 
   /**
+   * Returns the `n`th byte, 0-indexed.
+   *
+   * @throws NoSuchElementException if `n >= bytes.size`
+   *
+   * @group collection
+   */
+  def getByte(n: Long): Byte
+
+  /**
    * Alias for `get`.
    *
    * @group collection
@@ -208,7 +217,7 @@ sealed trait BitVector extends BitwiseOperations[BitVector, Long] with Serializa
    */
   def ++(b2: BitVector): BitVector =
     if (this.isEmpty) b2
-    else Chunks(Append(this, BitVector.empty)) ++ b2
+    else Chunks(Append(this, b2))
 
   /**
    * Returns a new vector with the specified bit prepended.
@@ -1366,6 +1375,15 @@ object BitVector {
       checkBounds(n)
       getBit(underlying((n / 8).toInt), (n % 8).toInt)
     }
+    def getByte(n: Long): Byte = {
+      if (n < underlying.size-1)
+        underlying(n.toInt)
+      else { // last byte may have some garbage bits, clear these out
+        val valid = 8 - invalidBits
+        (underlying(n.toInt) & topNBits(valid.toInt)).toByte
+      }
+    }
+
     def update(n: Long, high: Boolean): BitVector = {
       checkBounds(n)
       val b2 = underlying.update(
@@ -1400,6 +1418,8 @@ object BitVector {
     def align = interpretDrop
     def get(n: Long): Boolean =
       underlying.get(m + n)
+    def getByte(n: Long): Byte =
+      this.drop(n*8).take(8).align.getByte(0)
     def update(n: Long, high: Boolean): BitVector =
       Drop(underlying.update(m + n, high).compact, m)
 
@@ -1432,6 +1452,10 @@ object BitVector {
     def get(n: Long): Boolean =
       if (n < left.size) left.get(n)
       else right.get(n - left.size)
+    def getByte(n: Long): Byte =
+      if (n < left.size/8) left.getByte(n)
+      else if (left.size%8 == 0 && n > left.size/8) right.getByte(n - left.size/8)
+      else drop(n*8).take(8).align.getByte(0) // fall back to inefficient impl (todo: improve this)
     def update(n: Long, high: Boolean): BitVector =
       if (n < left.size) Append(left.update(n, high), right)
       else Append(left, right.update(n - left.size, high))
@@ -1451,8 +1475,8 @@ object BitVector {
       if (knownSize != -1L) knownSize
       else { // faster to just allow recomputation if there's contention
         val sz = left.size + right.size
-        sizeLowerBound.set(sz)
-        sizeUpperBound.set(sz)
+        sizeLowerBound.lazySet(sz)
+        sizeUpperBound.lazySet(sz)
         knownSize = sz
         sz
       }
@@ -1460,6 +1484,7 @@ object BitVector {
   private[scodec] case class Suspend(thunk: () => BitVector) extends BitVector {
     lazy val underlying = thunk()
     def get(n: Long): Boolean = underlying.get(n)
+    def getByte(n: Long): Byte = underlying.getByte(n)
     def update(n: Long, high: Boolean): BitVector = underlying.update(n, high)
     def size = underlying.size
     def align = underlying.align
@@ -1504,6 +1529,7 @@ object BitVector {
       chunks.update(n, high)
 
     def get(n: Long): Boolean = chunks.get(n)
+    def getByte(n: Long): Byte = chunks.getByte(n)
   }
 
   /** Concatenate `vs` to produce a single `BitVector`. */
