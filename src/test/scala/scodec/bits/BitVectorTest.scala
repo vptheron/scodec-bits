@@ -455,13 +455,20 @@ class BitVectorTest extends BitsSuite {
     forAll { (n: Int) =>
       BitVector.fromInt(n).toInt() shouldBe n
       BitVector.fromInt(n, ordering = ByteOrdering.LittleEndian).toInt(ordering = ByteOrdering.LittleEndian) shouldBe n
+      BitVector.fromInt(n).sliceToInt(0, 32) shouldBe n
+      BitVector.fromInt(n).sliceToInt(10,22) shouldBe BitVector.fromInt(n).drop(10).toInt()
+      BitVector.fromInt(n).sliceToInt(10,22, ordering = ByteOrdering.LittleEndian) shouldBe
+      BitVector.fromInt(n).drop(10).toInt(ordering = ByteOrdering.LittleEndian)
     }
   }
 
   test("long conversions") {
-    forAll { (n: Int) =>
+    forAll { (n: Long) =>
       BitVector.fromLong(n).toLong() shouldBe n
       BitVector.fromLong(n, ordering = ByteOrdering.LittleEndian).toLong(ordering = ByteOrdering.LittleEndian) shouldBe n
+      BitVector.fromLong(n).sliceToLong(10,54) shouldBe BitVector.fromLong(n).drop(10).toLong()
+      BitVector.fromLong(n).sliceToLong(10,54, ordering = ByteOrdering.LittleEndian) shouldBe
+      BitVector.fromLong(n).drop(10).toLong(ordering = ByteOrdering.LittleEndian)
     }
   }
 

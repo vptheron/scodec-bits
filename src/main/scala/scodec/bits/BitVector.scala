@@ -803,6 +803,51 @@ sealed trait BitVector extends BitwiseOperations[BitVector, Long] with Serializa
   final def toBase64(alphabet: Bases.Base64Alphabet): String = toByteVector.toBase64(alphabet)
 
   /**
+   * Convert a slice of bits from this vector (`start` until `start+bits`) to an `Int`.
+   *
+   * @param signed whether sign extension should be performed
+   * @param ordering order bytes should be processed in
+   * @throws IllegalArgumentException if the slice refers to indices that are out of range
+   * @group conversions
+   */
+  final def sliceToInt(start: Long, bits: Int,
+                       signed: Boolean = true, ordering: ByteOrdering = ByteOrdering.BigEndian): Int = {
+    if (start % 8 != 0) drop(start).sliceToInt(0, bits, signed, ordering)
+    else { // start % 8 == 0
+      require(sizeGreaterThanOrEqual(start + bits) && bits >= 0 && bits <= 32)
+      val mod = bits % 8
+      var result = 0
+      val bytesNeeded = bytesNeededForBits(bits)
+      val base = start / 8
+      ordering match {
+        case ByteOrdering.BigEndian =>
+          @annotation.tailrec
+          def go(i: Int): Unit =
+            if (i < bytesNeeded) {
+              result = (result << 8) | (0x0ff & this.getByte(base + i))
+              go(i + 1)
+            }
+          go(0)
+        case ByteOrdering.LittleEndian =>
+          @annotation.tailrec
+          def go(i: Int): Unit =
+            if (i < bytesNeeded) {
+              result = result | ((0x0ff & this.getByte(base + i)) << (8 * i))
+              go(i + 1)
+            }
+          go(0)
+      }
+      if (mod != 0) result = result >>> (8 - mod)
+      // Sign extend if necessary
+      if (signed && bits != 32 && ((1 << (bits - 1)) & result) != 0) {
+        val toShift = 32 - bits
+        result = (result << toShift) >> toShift
+      }
+      result
+    }
+  }
+
+  /**
    * Converts the contents of this vector to an int.
    *
    * @param signed whether sign extension should be performed
@@ -815,23 +860,24 @@ sealed trait BitVector extends BitwiseOperations[BitVector, Long] with Serializa
     val bits = intSize.get
     val mod = bits % 8
     var result = 0
+    val bytesNeeded = bytesNeededForBits(bits)
     ordering match {
       case ByteOrdering.BigEndian =>
         @annotation.tailrec
-        def go(bv: ByteVector, i: Int): Unit =
-          if (i < bv.size) {
-            result = (result << 8) | (0x0ff & bv.get(i))
-            go(bv, i + 1)
+        def go(i: Int): Unit =
+          if (i < bytesNeeded) {
+            result = (result << 8) | (0x0ff & this.getByte(i))
+            go(i + 1)
           }
-        go(this.bytes, 0)
+        go(0)
       case ByteOrdering.LittleEndian =>
         @annotation.tailrec
-        def go(bv: ByteVector, i: Int): Unit =
-          if (i < bv.size) {
-            result = result | ((0x0ff & bv.get(i)) << (8 * i))
-            go(bv, i + 1)
+        def go(i: Int): Unit =
+          if (i < bytesNeeded) {
+            result = result | ((0x0ff & this.getByte(i)) << (8 * i))
+            go(i + 1)
           }
-        go(this.bytes, 0)
+        go(0)
     }
     if (mod != 0) result = result >>> (8 - mod)
     // Sign extend if necessary
@@ -840,6 +886,51 @@ sealed trait BitVector extends BitwiseOperations[BitVector, Long] with Serializa
       result = (result << toShift) >> toShift
     }
     result
+  }
+
+  /**
+   * Convert a slice of bits from this vector (`start` until `start+bits`) to a `Long`.
+   *
+   * @param signed whether sign extension should be performed
+   * @param ordering order bytes should be processed in
+   * @throws IllegalArgumentException if the slice refers to indices that are out of range
+   * @group conversions
+   */
+  final def sliceToLong(start: Long, bits: Int,
+                        signed: Boolean = true, ordering: ByteOrdering = ByteOrdering.BigEndian): Long = {
+    if (start % 8 != 0) drop(start).sliceToLong(0, bits, signed, ordering)
+    else { // start % 8 == 0
+      require(sizeGreaterThanOrEqual(start + bits) && bits >= 0 && bits <= 64)
+      val mod = bits % 8
+      var result = 0L
+      val bytesNeeded = bytesNeededForBits(bits)
+      val base = start / 8
+      ordering match {
+        case ByteOrdering.BigEndian =>
+          @annotation.tailrec
+          def go(i: Int): Unit =
+            if (i < bytesNeeded) {
+              result = (result << 8) | (0x0ffL & this.getByte(base + i))
+              go(i + 1)
+            }
+          go(0)
+        case ByteOrdering.LittleEndian =>
+          @annotation.tailrec
+          def go(i: Int): Unit =
+            if (i < bytesNeeded) {
+              result = result | ((0x0ffL & this.getByte(base + i)) << (8 * i))
+              go(i + 1)
+            }
+          go(0)
+      }
+      if (mod != 0) result = result >>> (8 - mod)
+      // Sign extend if necessary
+      if (signed && bits != 64 && ((1 << (bits - 1)) & result) != 0) {
+        val toShift = 64 - bits
+        result = (result << toShift) >> toShift
+      }
+      result
+    }
   }
 
   /**
@@ -855,23 +946,24 @@ sealed trait BitVector extends BitwiseOperations[BitVector, Long] with Serializa
     val bits = intSize.get
     val mod = bits % 8
     var result = 0L
+    val bytesNeeded = bytesNeededForBits(bits)
     ordering match {
       case ByteOrdering.BigEndian =>
         @annotation.tailrec
-        def go(bv: ByteVector, i: Int): Unit =
-          if (i < bv.size) {
-            result = (result << 8) | (0x0ffL & bv.get(i))
-            go(bv, i + 1)
+        def go(i: Int): Unit =
+          if (i < bytesNeeded) {
+            result = (result << 8) | (0x0ffL & this.getByte(i))
+            go(i + 1)
           }
-        go(this.bytes, 0)
+        go(0)
       case ByteOrdering.LittleEndian =>
         @annotation.tailrec
-        def go(bv: ByteVector, i: Int): Unit =
-          if (i < bv.size) {
-            result = result | ((0x0ffL & bv.get(i)) << (8 * i))
-            go(bv, i + 1)
+        def go(i: Int): Unit =
+          if (i < bytesNeeded) {
+            result = result | ((0x0ffL & this.getByte(i)) << (8 * i))
+            go(i + 1)
           }
-        go(this.bytes, 0)
+        go(0)
     }
     if (mod != 0) result = result >>> (8 - mod)
     // Sign extend if necessary
