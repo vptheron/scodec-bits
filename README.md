@@ -11,8 +11,8 @@ Introduction
 ------------
 
 There are two fundamental data structures provided:
- - [`BitVector`](core/src/main/scala/scodec/bits/BitVector.scala)
- - [`ByteVector`](core/src/main/scala/scodec/bits/ByteVector.scala)
+ - [`BitVector`](src/main/scala/scodec/bits/BitVector.scala)
+ - [`ByteVector`](src/main/scala/scodec/bits/ByteVector.scala)
 
 Both datatypes provide collection like functionality, although neither directly implement the Scala
 collection library traits. Both are implemented as binary trees where each node is either a leaf
@@ -44,13 +44,13 @@ This library works with Scala 2.10 and 2.11.
 
 ### Releases
 
-The latest released version is 1.0.4.
+The latest released version is 1.0.3.
 
- - [ScalaDoc](http://docs.typelevel.org/api/scodec/bits/stable/1.0.4/)
+ - [ScalaDoc](http://docs.typelevel.org/api/scodec/bits/stable/1.0.3/)
 
 For SBT users:
 
-    libraryDependencies += "org.typelevel" %% "scodec-bits" % "1.0.4"
+    libraryDependencies += "org.typelevel" %% "scodec-bits" % "1.0.3"
 
 
 For Maven users:
@@ -59,7 +59,7 @@ For Maven users:
       <dependency>
         <groupId>org.typelevel</groupId>
         <artifactId>scodec-bits_2.11</artifactId>
-        <version>1.0.4</version>
+        <version>1.0.3</version>
       </dependency>
     </dependencies>
 
