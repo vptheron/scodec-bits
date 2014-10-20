@@ -308,6 +308,9 @@ class BitVectorTest extends BitsSuite {
     forAll(genBitVector(500, 0)) { (bv: BitVector) =>
       bv.reverseByteOrder.reverseByteOrder shouldBe bv
     }
+    forAll { (bv: BitVector) =>
+      bv.reverseByteOrder.invertReverseByteOrder shouldBe bv
+    }
   }
 
   test("toHex") {
@@ -451,15 +454,32 @@ class BitVectorTest extends BitsSuite {
     ok.get shouldBe true
   }}
 
+  test("byte conversions"){
+    forAll { (n: Byte) =>
+      BitVector.fromByte(n).toByte() shouldBe n
+      BitVector.fromByte(n).sliceToShort(0, 8) shouldBe n
+      BitVector.fromByte(n).sliceToShort(4, 4) shouldBe BitVector.fromByte(n).drop(4).toByte()
+    }
+    bin"11".toByte() shouldBe -1
+    bin"11".toByte(signed = false) shouldBe 3
+    BitVector.fromByte(3, 3) shouldBe bin"011"
+  }
+
   test("short conversions"){
     forAll { (n: Short) =>
       BitVector.fromShort(n).toShort() shouldBe n
       BitVector.fromShort(n, ordering = ByteOrdering.LittleEndian).toShort(ordering = ByteOrdering.LittleEndian) shouldBe n
       BitVector.fromShort(n).sliceToShort(0, 16) shouldBe n
-      BitVector.fromShort(n).sliceToShort(10,6) shouldBe BitVector.fromShort(n).drop(10).toShort()
-      BitVector.fromShort(n).sliceToShort(10,6, ordering = ByteOrdering.LittleEndian) shouldBe
-        BitVector.fromShort(n).drop(10).toShort(ordering = ByteOrdering.LittleEndian)
+      BitVector.fromShort(n).sliceToShort(4,12) shouldBe BitVector.fromShort(n).drop(4).toShort()
+      BitVector.fromShort(n).sliceToShort(4,12, ordering = ByteOrdering.LittleEndian) shouldBe
+        BitVector.fromShort(n).drop(4).toShort(ordering = ByteOrdering.LittleEndian)
+      if (n >= 0 && n < 16384) {
+        BitVector.fromShort(n, size = 15, ordering = ByteOrdering.BigEndian).toShort(ordering = ByteOrdering.BigEndian) shouldBe n
+        BitVector.fromShort(n, size = 15, ordering = ByteOrdering.LittleEndian).toShort(ordering = ByteOrdering.LittleEndian) shouldBe n
+      }
     }
+    bin"11".toShort() shouldBe -1
+    bin"11".toShort(signed = false) shouldBe 3
   }
 
   test("int conversions") {
@@ -469,7 +489,11 @@ class BitVectorTest extends BitsSuite {
       BitVector.fromInt(n).sliceToInt(0, 32) shouldBe n
       BitVector.fromInt(n).sliceToInt(10,22) shouldBe BitVector.fromInt(n).drop(10).toInt()
       BitVector.fromInt(n).sliceToInt(10,22, ordering = ByteOrdering.LittleEndian) shouldBe
-      BitVector.fromInt(n).drop(10).toInt(ordering = ByteOrdering.LittleEndian)
+        BitVector.fromInt(n).drop(10).toInt(ordering = ByteOrdering.LittleEndian)
+      if (n >= -16383 && n < 16384) {
+        BitVector.fromInt(n, size = 15, ordering = ByteOrdering.BigEndian).toInt(ordering = ByteOrdering.BigEndian) shouldBe n
+        BitVector.fromInt(n, size = 15, ordering = ByteOrdering.LittleEndian).toInt(ordering = ByteOrdering.LittleEndian) shouldBe n
+      }
     }
   }
 
@@ -479,7 +503,11 @@ class BitVectorTest extends BitsSuite {
       BitVector.fromLong(n, ordering = ByteOrdering.LittleEndian).toLong(ordering = ByteOrdering.LittleEndian) shouldBe n
       BitVector.fromLong(n).sliceToLong(10,54) shouldBe BitVector.fromLong(n).drop(10).toLong()
       BitVector.fromLong(n).sliceToLong(10,54, ordering = ByteOrdering.LittleEndian) shouldBe
-      BitVector.fromLong(n).drop(10).toLong(ordering = ByteOrdering.LittleEndian)
+        BitVector.fromLong(n).drop(10).toLong(ordering = ByteOrdering.LittleEndian)
+      if (n >= -16383 && n < 16384) {
+        BitVector.fromLong(n, size = 15, ordering = ByteOrdering.BigEndian).toLong(ordering = ByteOrdering.BigEndian) shouldBe n
+        BitVector.fromLong(n, size = 15, ordering = ByteOrdering.LittleEndian).toLong(ordering = ByteOrdering.LittleEndian) shouldBe n
+      }
     }
   }
 

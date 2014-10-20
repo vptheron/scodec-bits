@@ -83,7 +83,9 @@ object ScodecBuild extends Build {
       }
       val stripTestScope = stripIf { n => n.label == "dependency" && (n \ "scope").text == "test" }
       new RuleTransformer(stripTestScope).transform(node)(0)
-    },
+    }
+  ) ++ releaseSettings ++ Seq(
+    crossBuild := true,
     releaseProcess := Seq[ReleaseStep](
       checkSnapshotDependencies,
       inquireVersions,
@@ -96,7 +98,7 @@ object ScodecBuild extends Build {
       commitNextVersion,
       pushChanges
     )
-  ) ++ releaseSettings
+  )
 
   lazy val root: Project = project.in(file(".")).settings(commonSettings: _*).aggregate(core, benchmark).settings(
     publishArtifact := false
@@ -188,7 +190,23 @@ object ScodecBuild extends Build {
         "scodec.bits.BitVector#Bytes.sizeUpperBound",
         "scodec.bits.BitVector#Bytes.sizeLowerBound",
         "scodec.bits.BitVector#Bytes.scodec$bits$BitVector$_setter_$sizeUpperBound_=",
-        "scodec.bits.BitVector#Bytes.scodec$bits$BitVector$_setter_$sizeLowerBound_="
+        "scodec.bits.BitVector#Bytes.scodec$bits$BitVector$_setter_$sizeLowerBound_=",
+        "scodec.bits.BitVector.toShort",
+        "scodec.bits.BitVector.toShort$default$1",
+        "scodec.bits.BitVector.toShort$default$2",
+        "scodec.bits.BitVector.sliceToShort",
+        "scodec.bits.BitVector.sliceToShort$default$3",
+        "scodec.bits.BitVector.sliceToShort$default$4",
+        "scodec.bits.ByteVector.toShort",
+        "scodec.bits.ByteVector.toShort$default$1",
+        "scodec.bits.ByteVector.toShort$default$2",
+        "scodec.bits.ByteVector.toByte",
+        "scodec.bits.ByteVector.toByte$default$1",
+        "scodec.bits.BitVector.toByte",
+        "scodec.bits.BitVector.toByte$default$1",
+        "scodec.bits.BitVector.sliceToByte",
+        "scodec.bits.BitVector.sliceToByte$default$3",
+        "scodec.bits.BitVector.invertReverseByteOrder"
       ).map { method => ProblemFilters.exclude[MissingMethodProblem](method) },
       binaryIssueFilters +=
         // result type changed, but this method was private
